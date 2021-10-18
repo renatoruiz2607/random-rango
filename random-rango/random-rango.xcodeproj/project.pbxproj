@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		5FC522FF271CFBD100DC2B7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC522FE271CFBD100DC2B7A /* AppDelegate.swift */; };
 		5FC52301271CFBD100DC2B7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC52300271CFBD100DC2B7A /* SceneDelegate.swift */; };
-		5FC52303271CFBD100DC2B7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC52302271CFBD100DC2B7A /* ViewController.swift */; };
-		5FC52306271CFBD100DC2B7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FC52304271CFBD100DC2B7A /* Main.storyboard */; };
 		5FC52308271CFBD200DC2B7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FC52307271CFBD200DC2B7A /* Assets.xcassets */; };
 		5FC5230B271CFBD200DC2B7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FC52309271CFBD200DC2B7A /* LaunchScreen.storyboard */; };
 		5FC52316271CFBD200DC2B7A /* random_rangoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC52315271CFBD200DC2B7A /* random_rangoTests.swift */; };
 		5FC52320271CFBD300DC2B7A /* random_rangoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC5231F271CFBD300DC2B7A /* random_rangoUITests.swift */; };
 		5FC52322271CFBD300DC2B7A /* random_rangoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC52321271CFBD300DC2B7A /* random_rangoUITestsLaunchTests.swift */; };
+		5FC52331271D066700DC2B7A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC5232F271D066700DC2B7A /* HomeViewController.swift */; };
+		5FC52332271D066700DC2B7A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FC52330271D066700DC2B7A /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		5FC522FB271CFBD100DC2B7A /* random-rango.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "random-rango.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FC522FE271CFBD100DC2B7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FC52300271CFBD100DC2B7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5FC52302271CFBD100DC2B7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5FC52305271CFBD100DC2B7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FC52307271CFBD200DC2B7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FC5230A271CFBD200DC2B7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FC5230C271CFBD200DC2B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +47,8 @@
 		5FC5231B271CFBD300DC2B7A /* random-rangoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "random-rangoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FC5231F271CFBD300DC2B7A /* random_rangoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = random_rangoUITests.swift; sourceTree = "<group>"; };
 		5FC52321271CFBD300DC2B7A /* random_rangoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = random_rangoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5FC5232F271D066700DC2B7A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5FC52330271D066700DC2B7A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +101,7 @@
 			children = (
 				5FC522FE271CFBD100DC2B7A /* AppDelegate.swift */,
 				5FC52300271CFBD100DC2B7A /* SceneDelegate.swift */,
-				5FC52302271CFBD100DC2B7A /* ViewController.swift */,
-				5FC52304271CFBD100DC2B7A /* Main.storyboard */,
+				5FC5232E271D059600DC2B7A /* Modules */,
 				5FC52307271CFBD200DC2B7A /* Assets.xcassets */,
 				5FC52309271CFBD200DC2B7A /* LaunchScreen.storyboard */,
 				5FC5230C271CFBD200DC2B7A /* Info.plist */,
@@ -125,6 +124,15 @@
 				5FC52321271CFBD300DC2B7A /* random_rangoUITestsLaunchTests.swift */,
 			);
 			path = "random-rangoUITests";
+			sourceTree = "<group>";
+		};
+		5FC5232E271D059600DC2B7A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5FC5232F271D066700DC2B7A /* HomeViewController.swift */,
+				5FC52330271D066700DC2B7A /* HomeViewController.xib */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +241,7 @@
 			files = (
 				5FC5230B271CFBD200DC2B7A /* LaunchScreen.storyboard in Resources */,
 				5FC52308271CFBD200DC2B7A /* Assets.xcassets in Resources */,
-				5FC52306271CFBD100DC2B7A /* Main.storyboard in Resources */,
+				5FC52332271D066700DC2B7A /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FC52303271CFBD100DC2B7A /* ViewController.swift in Sources */,
 				5FC522FF271CFBD100DC2B7A /* AppDelegate.swift in Sources */,
 				5FC52301271CFBD100DC2B7A /* SceneDelegate.swift in Sources */,
+				5FC52331271D066700DC2B7A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +305,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5FC52304271CFBD100DC2B7A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5FC52305271CFBD100DC2B7A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5FC52309271CFBD200DC2B7A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,7 +444,7 @@
 				INFOPLIST_FILE = "random-rango/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +472,7 @@
 				INFOPLIST_FILE = "random-rango/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
