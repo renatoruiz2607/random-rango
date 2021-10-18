@@ -1,0 +1,6 @@
+framework module Pods_random_rango_random_rangoUITests {
+  umbrella header "Pods-random-rango-random-rangoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

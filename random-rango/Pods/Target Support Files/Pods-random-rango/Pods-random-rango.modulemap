@@ -1,0 +1,6 @@
+framework module Pods_random_rango {
+  umbrella header "Pods-random-rango-umbrella.h"
+
+  export *
+  module * { export * }
+}
