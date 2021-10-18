@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-random-rango-random-rangoUITests/Pods-random-rango-random-rangoUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework

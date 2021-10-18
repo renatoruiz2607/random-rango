@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F70D8F2271DE3CB002128A3 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F70D8F1271DE3CB002128A3 /* HomeRouter.swift */; };
+		5F70D8F6271DED31002128A3 /* RouterTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F70D8F4271DED31002128A3 /* RouterTestViewController.swift */; };
+		5F70D8F7271DED31002128A3 /* RouterTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F70D8F5271DED31002128A3 /* RouterTestViewController.xib */; };
 		5FC522FF271CFBD100DC2B7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC522FE271CFBD100DC2B7A /* AppDelegate.swift */; };
 		5FC52301271CFBD100DC2B7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC52300271CFBD100DC2B7A /* SceneDelegate.swift */; };
 		5FC52308271CFBD200DC2B7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FC52307271CFBD200DC2B7A /* Assets.xcassets */; };
@@ -16,6 +19,14 @@
 		5FC52322271CFBD300DC2B7A /* random_rangoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC52321271CFBD300DC2B7A /* random_rangoUITestsLaunchTests.swift */; };
 		5FC52331271D066700DC2B7A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC5232F271D066700DC2B7A /* HomeViewController.swift */; };
 		5FC52332271D066700DC2B7A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FC52330271D066700DC2B7A /* HomeViewController.xib */; };
+		5FC52337271DCE6D00DC2B7A /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC52335271DCE6D00DC2B7A /* TextFieldCell.swift */; };
+		5FC52338271DCE6D00DC2B7A /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FC52336271DCE6D00DC2B7A /* TextFieldCell.xib */; };
+		5FC5233B271DCE7C00DC2B7A /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC52339271DCE7C00DC2B7A /* ButtonCell.swift */; };
+		5FC5233C271DCE7C00DC2B7A /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FC5233A271DCE7C00DC2B7A /* ButtonCell.xib */; };
+		5FC52340271DD27700DC2B7A /* HomeSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC5233F271DD27700DC2B7A /* HomeSectionModel.swift */; };
+		871E11A9F5DA4A6D6A1EC37A /* Pods_random_rangoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFEF16147A4E4795FDB91A7 /* Pods_random_rangoTests.framework */; };
+		AC5CA1E474D18E4DAA41B481 /* Pods_random_rango_random_rangoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753FABCA6B8940F1465C62DE /* Pods_random_rango_random_rangoUITests.framework */; };
+		B1F809CE1B2D979F20A4C25E /* Pods_random_rango.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B01ADD6E5A2DCA9BFF76650 /* Pods_random_rango.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0363157DB2CB1892415A7ACC /* Pods-random-rangoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rangoTests.debug.xcconfig"; path = "Target Support Files/Pods-random-rangoTests/Pods-random-rangoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1FFDAC11D759135ADF8F6FE5 /* Pods-random-rangoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rangoTests.release.xcconfig"; path = "Target Support Files/Pods-random-rangoTests/Pods-random-rangoTests.release.xcconfig"; sourceTree = "<group>"; };
+		2AFEF16147A4E4795FDB91A7 /* Pods_random_rangoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_random_rangoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F70D8F1271DE3CB002128A3 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		5F70D8F4271DED31002128A3 /* RouterTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTestViewController.swift; sourceTree = "<group>"; };
+		5F70D8F5271DED31002128A3 /* RouterTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouterTestViewController.xib; sourceTree = "<group>"; };
 		5FC522FB271CFBD100DC2B7A /* random-rango.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "random-rango.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FC522FE271CFBD100DC2B7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FC52300271CFBD100DC2B7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +66,17 @@
 		5FC52321271CFBD300DC2B7A /* random_rangoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = random_rangoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5FC5232F271D066700DC2B7A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5FC52330271D066700DC2B7A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		5FC52335271DCE6D00DC2B7A /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
+		5FC52336271DCE6D00DC2B7A /* TextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
+		5FC52339271DCE7C00DC2B7A /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		5FC5233A271DCE7C00DC2B7A /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		5FC5233F271DD27700DC2B7A /* HomeSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionModel.swift; sourceTree = "<group>"; };
+		6DC91890B304EE38E73BBA9A /* Pods-random-rango-random-rangoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rango-random-rangoUITests.debug.xcconfig"; path = "Target Support Files/Pods-random-rango-random-rangoUITests/Pods-random-rango-random-rangoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		753FABCA6B8940F1465C62DE /* Pods_random_rango_random_rangoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_random_rango_random_rangoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B01ADD6E5A2DCA9BFF76650 /* Pods_random_rango.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_random_rango.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BAE58EDA509F031B7881A75 /* Pods-random-rango-random-rangoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rango-random-rangoUITests.release.xcconfig"; path = "Target Support Files/Pods-random-rango-random-rangoUITests/Pods-random-rango-random-rangoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ED7200E059B5F6F49D74E24F /* Pods-random-rango.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rango.debug.xcconfig"; path = "Target Support Files/Pods-random-rango/Pods-random-rango.debug.xcconfig"; sourceTree = "<group>"; };
+		F967E77EB0593193027EFD90 /* Pods-random-rango.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rango.release.xcconfig"; path = "Target Support Files/Pods-random-rango/Pods-random-rango.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F809CE1B2D979F20A4C25E /* Pods_random_rango.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				871E11A9F5DA4A6D6A1EC37A /* Pods_random_rangoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +100,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5CA1E474D18E4DAA41B481 /* Pods_random_rango_random_rangoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F70D8F3271DED12002128A3 /* RouterTest */ = {
+			isa = PBXGroup;
+			children = (
+				5F70D8F4271DED31002128A3 /* RouterTestViewController.swift */,
+				5F70D8F5271DED31002128A3 /* RouterTestViewController.xib */,
+			);
+			path = RouterTest;
+			sourceTree = "<group>";
+		};
 		5FC522F2271CFBD100DC2B7A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +123,8 @@
 				5FC52314271CFBD200DC2B7A /* random-rangoTests */,
 				5FC5231E271CFBD300DC2B7A /* random-rangoUITests */,
 				5FC522FC271CFBD100DC2B7A /* Products */,
+				DEE3DD1CD81779CE7C0CF7B3 /* Pods */,
+				D77A9388CC55412763DB3508 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,10 +171,65 @@
 		5FC5232E271D059600DC2B7A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				5FC5232F271D066700DC2B7A /* HomeViewController.swift */,
-				5FC52330271D066700DC2B7A /* HomeViewController.xib */,
+				5F70D8F3271DED12002128A3 /* RouterTest */,
+				5FC52333271DC6F900DC2B7A /* Home */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		5FC52333271DC6F900DC2B7A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5FC5233E271DD25E00DC2B7A /* Models */,
+				5FC52334271DCE0E00DC2B7A /* Cells */,
+				5FC5232F271D066700DC2B7A /* HomeViewController.swift */,
+				5FC52330271D066700DC2B7A /* HomeViewController.xib */,
+				5F70D8F1271DE3CB002128A3 /* HomeRouter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5FC52334271DCE0E00DC2B7A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5FC52335271DCE6D00DC2B7A /* TextFieldCell.swift */,
+				5FC52336271DCE6D00DC2B7A /* TextFieldCell.xib */,
+				5FC52339271DCE7C00DC2B7A /* ButtonCell.swift */,
+				5FC5233A271DCE7C00DC2B7A /* ButtonCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5FC5233E271DD25E00DC2B7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5FC5233F271DD27700DC2B7A /* HomeSectionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D77A9388CC55412763DB3508 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B01ADD6E5A2DCA9BFF76650 /* Pods_random_rango.framework */,
+				753FABCA6B8940F1465C62DE /* Pods_random_rango_random_rangoUITests.framework */,
+				2AFEF16147A4E4795FDB91A7 /* Pods_random_rangoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEE3DD1CD81779CE7C0CF7B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED7200E059B5F6F49D74E24F /* Pods-random-rango.debug.xcconfig */,
+				F967E77EB0593193027EFD90 /* Pods-random-rango.release.xcconfig */,
+				6DC91890B304EE38E73BBA9A /* Pods-random-rango-random-rangoUITests.debug.xcconfig */,
+				7BAE58EDA509F031B7881A75 /* Pods-random-rango-random-rangoUITests.release.xcconfig */,
+				0363157DB2CB1892415A7ACC /* Pods-random-rangoTests.debug.xcconfig */,
+				1FFDAC11D759135ADF8F6FE5 /* Pods-random-rangoTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FC52325271CFBD300DC2B7A /* Build configuration list for PBXNativeTarget "random-rango" */;
 			buildPhases = (
+				F7BC2009F7C3C34C5B0A3418 /* [CP] Check Pods Manifest.lock */,
 				5FC522F7271CFBD100DC2B7A /* Sources */,
 				5FC522F8271CFBD100DC2B7A /* Frameworks */,
 				5FC522F9271CFBD100DC2B7A /* Resources */,
+				DD2413B1E7F4C93D55955C09 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +258,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FC52328271CFBD300DC2B7A /* Build configuration list for PBXNativeTarget "random-rangoTests" */;
 			buildPhases = (
+				59CC00B6B0E870F48CAA1374 /* [CP] Check Pods Manifest.lock */,
 				5FC5230D271CFBD200DC2B7A /* Sources */,
 				5FC5230E271CFBD200DC2B7A /* Frameworks */,
 				5FC5230F271CFBD200DC2B7A /* Resources */,
@@ -177,9 +277,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FC5232B271CFBD300DC2B7A /* Build configuration list for PBXNativeTarget "random-rangoUITests" */;
 			buildPhases = (
+				097B0246017D2F2A15D621E2 /* [CP] Check Pods Manifest.lock */,
 				5FC52317271CFBD300DC2B7A /* Sources */,
 				5FC52318271CFBD300DC2B7A /* Frameworks */,
 				5FC52319271CFBD300DC2B7A /* Resources */,
+				92AC12741A49580C201956BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,7 +343,10 @@
 			files = (
 				5FC5230B271CFBD200DC2B7A /* LaunchScreen.storyboard in Resources */,
 				5FC52308271CFBD200DC2B7A /* Assets.xcassets in Resources */,
+				5FC5233C271DCE7C00DC2B7A /* ButtonCell.xib in Resources */,
 				5FC52332271D066700DC2B7A /* HomeViewController.xib in Resources */,
+				5FC52338271DCE6D00DC2B7A /* TextFieldCell.xib in Resources */,
+				5F70D8F7271DED31002128A3 /* RouterTestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,14 +366,122 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		097B0246017D2F2A15D621E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-random-rango-random-rangoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59CC00B6B0E870F48CAA1374 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-random-rangoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92AC12741A49580C201956BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-random-rango-random-rangoUITests/Pods-random-rango-random-rangoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-random-rango-random-rangoUITests/Pods-random-rango-random-rangoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-random-rango-random-rangoUITests/Pods-random-rango-random-rangoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD2413B1E7F4C93D55955C09 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-random-rango/Pods-random-rango-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-random-rango/Pods-random-rango-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-random-rango/Pods-random-rango-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7BC2009F7C3C34C5B0A3418 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-random-rango-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5FC522F7271CFBD100DC2B7A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FC52340271DD27700DC2B7A /* HomeSectionModel.swift in Sources */,
+				5F70D8F6271DED31002128A3 /* RouterTestViewController.swift in Sources */,
 				5FC522FF271CFBD100DC2B7A /* AppDelegate.swift in Sources */,
+				5F70D8F2271DE3CB002128A3 /* HomeRouter.swift in Sources */,
 				5FC52301271CFBD100DC2B7A /* SceneDelegate.swift in Sources */,
 				5FC52331271D066700DC2B7A /* HomeViewController.swift in Sources */,
+				5FC5233B271DCE7C00DC2B7A /* ButtonCell.swift in Sources */,
+				5FC52337271DCE6D00DC2B7A /* TextFieldCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +647,7 @@
 		};
 		5FC52326271CFBD300DC2B7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED7200E059B5F6F49D74E24F /* Pods-random-rango.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,6 +676,7 @@
 		};
 		5FC52327271CFBD300DC2B7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F967E77EB0593193027EFD90 /* Pods-random-rango.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,6 +705,7 @@
 		};
 		5FC52329271CFBD300DC2B7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0363157DB2CB1892415A7ACC /* Pods-random-rangoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +731,7 @@
 		};
 		5FC5232A271CFBD300DC2B7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FFDAC11D759135ADF8F6FE5 /* Pods-random-rangoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +757,7 @@
 		};
 		5FC5232C271CFBD300DC2B7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DC91890B304EE38E73BBA9A /* Pods-random-rango-random-rangoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -563,6 +781,7 @@
 		};
 		5FC5232D271CFBD300DC2B7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BAE58EDA509F031B7881A75 /* Pods-random-rango-random-rangoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
