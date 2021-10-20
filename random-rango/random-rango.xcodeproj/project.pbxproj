@@ -10,6 +10,9 @@
 		5F70D8F2271DE3CB002128A3 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F70D8F1271DE3CB002128A3 /* HomeRouter.swift */; };
 		5F70D8F6271DED31002128A3 /* RouterTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F70D8F4271DED31002128A3 /* RouterTestViewController.swift */; };
 		5F70D8F7271DED31002128A3 /* RouterTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F70D8F5271DED31002128A3 /* RouterTestViewController.xib */; };
+		5F90EE6A2720756C005EFE17 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F90EE682720756C005EFE17 /* IntroViewController.swift */; };
+		5F90EE6B2720756C005EFE17 /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F90EE692720756C005EFE17 /* IntroViewController.xib */; };
+		5F90EE6D27207587005EFE17 /* IntroRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F90EE6C27207587005EFE17 /* IntroRouter.swift */; };
 		5FC522FF271CFBD100DC2B7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC522FE271CFBD100DC2B7A /* AppDelegate.swift */; };
 		5FC52301271CFBD100DC2B7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC52300271CFBD100DC2B7A /* SceneDelegate.swift */; };
 		5FC52308271CFBD200DC2B7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FC52307271CFBD200DC2B7A /* Assets.xcassets */; };
@@ -53,6 +56,9 @@
 		5F70D8F1271DE3CB002128A3 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		5F70D8F4271DED31002128A3 /* RouterTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTestViewController.swift; sourceTree = "<group>"; };
 		5F70D8F5271DED31002128A3 /* RouterTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouterTestViewController.xib; sourceTree = "<group>"; };
+		5F90EE682720756C005EFE17 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		5F90EE692720756C005EFE17 /* IntroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroViewController.xib; sourceTree = "<group>"; };
+		5F90EE6C27207587005EFE17 /* IntroRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroRouter.swift; sourceTree = "<group>"; };
 		5FC522FB271CFBD100DC2B7A /* random-rango.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "random-rango.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FC522FE271CFBD100DC2B7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FC52300271CFBD100DC2B7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +122,16 @@
 			path = RouterTest;
 			sourceTree = "<group>";
 		};
+		5F90EE6727207555005EFE17 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				5F90EE682720756C005EFE17 /* IntroViewController.swift */,
+				5F90EE692720756C005EFE17 /* IntroViewController.xib */,
+				5F90EE6C27207587005EFE17 /* IntroRouter.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
 		5FC522F2271CFBD100DC2B7A = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +187,7 @@
 		5FC5232E271D059600DC2B7A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5F90EE6727207555005EFE17 /* Intro */,
 				5F70D8F3271DED12002128A3 /* RouterTest */,
 				5FC52333271DC6F900DC2B7A /* Home */,
 			);
@@ -228,7 +245,6 @@
 				0363157DB2CB1892415A7ACC /* Pods-random-rangoTests.debug.xcconfig */,
 				1FFDAC11D759135ADF8F6FE5 /* Pods-random-rangoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -345,6 +361,7 @@
 				5FC52308271CFBD200DC2B7A /* Assets.xcassets in Resources */,
 				5FC5233C271DCE7C00DC2B7A /* ButtonCell.xib in Resources */,
 				5FC52332271D066700DC2B7A /* HomeViewController.xib in Resources */,
+				5F90EE6B2720756C005EFE17 /* IntroViewController.xib in Resources */,
 				5FC52338271DCE6D00DC2B7A /* TextFieldCell.xib in Resources */,
 				5F70D8F7271DED31002128A3 /* RouterTestViewController.xib in Resources */,
 			);
@@ -474,8 +491,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F90EE6A2720756C005EFE17 /* IntroViewController.swift in Sources */,
 				5FC52340271DD27700DC2B7A /* HomeSectionModel.swift in Sources */,
 				5F70D8F6271DED31002128A3 /* RouterTestViewController.swift in Sources */,
+				5F90EE6D27207587005EFE17 /* IntroRouter.swift in Sources */,
 				5FC522FF271CFBD100DC2B7A /* AppDelegate.swift in Sources */,
 				5F70D8F2271DE3CB002128A3 /* HomeRouter.swift in Sources */,
 				5FC52301271CFBD100DC2B7A /* SceneDelegate.swift in Sources */,
