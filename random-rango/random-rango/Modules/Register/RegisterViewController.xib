@@ -10,6 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="random_rango" customModuleProvider="target">
             <connections>
+                <outlet property="confirmarSenhaTextField" destination="K8A-Ne-5cP" id="9pw-0n-TVR"/>
+                <outlet property="criarCadastroButton" destination="1Fc-Ov-u2S" id="GuH-zW-AFh"/>
+                <outlet property="emailTextField" destination="rtN-q0-Ut6" id="QrH-wQ-d2X"/>
+                <outlet property="senhaTextField" destination="08u-Hq-K6O" id="3r6-LW-Jp9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,21 +22,73 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nN-Ix-rmR">
-                    <rect key="frame" x="88" y="601" width="232" height="52"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.87696689370000003" green="0.22038161749999999" blue="0.33124136920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="JAM-n2-zo9">
+                    <rect key="frame" x="24" y="114" width="366" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="LzN-Pg-byU"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rtN-q0-Ut6">
+                    <rect key="frame" x="24" y="284" width="366" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ol1-Lq-xf6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="08u-Hq-K6O">
+                    <rect key="frame" x="24" y="358" width="366" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Qtc-Lt-k28"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="lXm-20-q9T"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K8A-Ne-5cP">
+                    <rect key="frame" x="24" y="432" width="366" height="50"/>
                     <color key="tintColor" red="0.93819838759999996" green="0.56340944770000001" blue="0.3657412827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="9Wp-ZM-kE6"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Fam-rn-27n"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fc-Ov-u2S">
+                    <rect key="frame" x="90" y="552" width="234" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="aWI-mx-i1s"/>
+                    </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Criar Cadastro"/>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Fc-Ov-u2S" secondAttribute="trailing" constant="90" id="1Rx-qb-WEp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="K8A-Ne-5cP" secondAttribute="trailing" constant="24" id="4je-lN-anN"/>
+                <constraint firstItem="JAM-n2-zo9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="70" id="BgS-aK-vrb"/>
+                <constraint firstItem="rtN-q0-Ut6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="J0L-7Z-LZL"/>
+                <constraint firstItem="08u-Hq-K6O" firstAttribute="top" secondItem="rtN-q0-Ut6" secondAttribute="bottom" constant="24" id="MTq-Yb-2dc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JAM-n2-zo9" secondAttribute="trailing" constant="24" id="Qhs-vJ-Imm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="08u-Hq-K6O" secondAttribute="trailing" constant="24" id="REW-wC-i8Z"/>
+                <constraint firstItem="rtN-q0-Ut6" firstAttribute="top" secondItem="JAM-n2-zo9" secondAttribute="bottom" constant="70" id="SfL-iW-iTP"/>
+                <constraint firstItem="08u-Hq-K6O" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="Xy5-YY-HFt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1Fc-Ov-u2S" secondAttribute="bottom" constant="260" id="aui-1Z-W3L"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rtN-q0-Ut6" secondAttribute="trailing" constant="24" id="dmf-CW-qcx"/>
+                <constraint firstItem="K8A-Ne-5cP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="eLY-f9-Wbv"/>
+                <constraint firstItem="JAM-n2-zo9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="mnz-lT-2bX"/>
+                <constraint firstItem="1Fc-Ov-u2S" firstAttribute="top" secondItem="K8A-Ne-5cP" secondAttribute="bottom" constant="70" id="sfa-Ew-0D4"/>
+                <constraint firstItem="K8A-Ne-5cP" firstAttribute="top" secondItem="08u-Hq-K6O" secondAttribute="bottom" constant="24" id="wiT-jO-9md"/>
+                <constraint firstItem="1Fc-Ov-u2S" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="90" id="zq2-a9-g71"/>
+            </constraints>
             <point key="canvasLocation" x="133" y="110"/>
         </view>
     </objects>
     <resources>
+        <image name="appLogo" width="1440" height="270"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
