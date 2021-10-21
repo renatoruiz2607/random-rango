@@ -9,16 +9,16 @@ import Foundation
 import UIKit
 
 extension UIView {
-    func roundCorners(cornerRadius: CGFloat, typeCorners: CACornerMask) {
-        self.layer.cornerRadius = cornerRadius
-        self.layer.maskedCorners = typeCorners
-        self.clipsToBounds = true
-}
+//    func roundCorners(cornerRadius: CGFloat, typeCorners: CACornerMask) {
+//        self.layer.cornerRadius = cornerRadius
+//        self.layer.maskedCorners = typeCorners
+//        self.clipsToBounds = true
+//}
     
-    extension CACornerMask {
-        static public let inferiorDireito:CACornerMask = . layerMaxXMinYCorner
-        static public let
-    }
+//    extension CACornerMask {
+//        static public let inferiorDireito:CACornerMask = . layerMaxXMinYCorner
+//       // static public let
+//    }
 
 
 func roundCorners(cornerRadius: CGFloat, typeCorners: CACornerMask) {
