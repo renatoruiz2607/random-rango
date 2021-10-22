@@ -32,6 +32,8 @@
 		5FC5233B271DCE7C00DC2B7A /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC52339271DCE7C00DC2B7A /* ButtonCell.swift */; };
 		5FC5233C271DCE7C00DC2B7A /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FC5233A271DCE7C00DC2B7A /* ButtonCell.xib */; };
 		5FC52340271DD27700DC2B7A /* HomeSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC5233F271DD27700DC2B7A /* HomeSectionModel.swift */; };
+		6692A9FB2721F5D500C5E899 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692A9F92721F5D500C5E899 /* FilterViewController.swift */; };
+		6692A9FC2721F5D500C5E899 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6692A9FA2721F5D500C5E899 /* FilterViewController.xib */; };
 		871E11A9F5DA4A6D6A1EC37A /* Pods_random_rangoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFEF16147A4E4795FDB91A7 /* Pods_random_rangoTests.framework */; };
 		AC5CA1E474D18E4DAA41B481 /* Pods_random_rango_random_rangoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753FABCA6B8940F1465C62DE /* Pods_random_rango_random_rangoUITests.framework */; };
 		B1F809CE1B2D979F20A4C25E /* Pods_random_rango.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B01ADD6E5A2DCA9BFF76650 /* Pods_random_rango.framework */; };
@@ -89,6 +91,8 @@
 		5FC52339271DCE7C00DC2B7A /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		5FC5233A271DCE7C00DC2B7A /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		5FC5233F271DD27700DC2B7A /* HomeSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionModel.swift; sourceTree = "<group>"; };
+		6692A9F92721F5D500C5E899 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		6692A9FA2721F5D500C5E899 /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
 		6DC91890B304EE38E73BBA9A /* Pods-random-rango-random-rangoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rango-random-rangoUITests.debug.xcconfig"; path = "Target Support Files/Pods-random-rango-random-rangoUITests/Pods-random-rango-random-rangoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		753FABCA6B8940F1465C62DE /* Pods_random_rango_random_rangoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_random_rango_random_rangoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B01ADD6E5A2DCA9BFF76650 /* Pods_random_rango.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_random_rango.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +217,7 @@
 		5FC5232E271D059600DC2B7A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6692A9F82721F55E00C5E899 /* Filter */,
 				DCCEB9152720F1A800B70846 /* Sugestion */,
 				030D4CF12720E537007753D1 /* Register */,
 				5F90EE6727207555005EFE17 /* Intro */,
@@ -251,6 +256,15 @@
 				5FC5233F271DD27700DC2B7A /* HomeSectionModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6692A9F82721F55E00C5E899 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				6692A9F92721F5D500C5E899 /* FilterViewController.swift */,
+				6692A9FA2721F5D500C5E899 /* FilterViewController.xib */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		D77A9388CC55412763DB3508 /* Frameworks */ = {
@@ -394,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6692A9FC2721F5D500C5E899 /* FilterViewController.xib in Resources */,
 				5FC5230B271CFBD200DC2B7A /* LaunchScreen.storyboard in Resources */,
 				5FC52308271CFBD200DC2B7A /* Assets.xcassets in Resources */,
 				5FC5233C271DCE7C00DC2B7A /* ButtonCell.xib in Resources */,
@@ -531,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6692A9FB2721F5D500C5E899 /* FilterViewController.swift in Sources */,
 				5F90EE6A2720756C005EFE17 /* IntroViewController.swift in Sources */,
 				030D4CF42720E573007753D1 /* RegisterViewController.swift in Sources */,
 				5FC52340271DD27700DC2B7A /* HomeSectionModel.swift in Sources */,
