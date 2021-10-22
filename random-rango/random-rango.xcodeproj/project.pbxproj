@@ -32,6 +32,9 @@
 		5FC5233B271DCE7C00DC2B7A /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC52339271DCE7C00DC2B7A /* ButtonCell.swift */; };
 		5FC5233C271DCE7C00DC2B7A /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FC5233A271DCE7C00DC2B7A /* ButtonCell.xib */; };
 		5FC52340271DD27700DC2B7A /* HomeSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC5233F271DD27700DC2B7A /* HomeSectionModel.swift */; };
+		64F2F33527221F3400030EF7 /* HistoricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F2F33427221F3400030EF7 /* HistoricViewController.swift */; };
+		64F2F3382722232E00030EF7 /* HistoricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F2F3372722232E00030EF7 /* HistoricView.swift */; };
+		64F2F33A2722490300030EF7 /* RangoCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F2F3392722490300030EF7 /* RangoCustomCell.swift */; };
 		6692A9FB2721F5D500C5E899 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692A9F92721F5D500C5E899 /* FilterViewController.swift */; };
 		6692A9FC2721F5D500C5E899 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6692A9FA2721F5D500C5E899 /* FilterViewController.xib */; };
 		871E11A9F5DA4A6D6A1EC37A /* Pods_random_rangoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFEF16147A4E4795FDB91A7 /* Pods_random_rangoTests.framework */; };
@@ -91,6 +94,9 @@
 		5FC52339271DCE7C00DC2B7A /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		5FC5233A271DCE7C00DC2B7A /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		5FC5233F271DD27700DC2B7A /* HomeSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionModel.swift; sourceTree = "<group>"; };
+		64F2F33427221F3400030EF7 /* HistoricViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewController.swift; sourceTree = "<group>"; };
+		64F2F3372722232E00030EF7 /* HistoricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricView.swift; sourceTree = "<group>"; };
+		64F2F3392722490300030EF7 /* RangoCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangoCustomCell.swift; sourceTree = "<group>"; };
 		6692A9F92721F5D500C5E899 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		6692A9FA2721F5D500C5E899 /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
 		6DC91890B304EE38E73BBA9A /* Pods-random-rango-random-rangoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rango-random-rangoUITests.debug.xcconfig"; path = "Target Support Files/Pods-random-rango-random-rangoUITests/Pods-random-rango-random-rangoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -217,6 +223,7 @@
 		5FC5232E271D059600DC2B7A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				64F2F33327221F1E00030EF7 /* Historic */,
 				6692A9F82721F55E00C5E899 /* Filter */,
 				DCCEB9152720F1A800B70846 /* Sugestion */,
 				030D4CF12720E537007753D1 /* Register */,
@@ -256,6 +263,24 @@
 				5FC5233F271DD27700DC2B7A /* HomeSectionModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		64F2F33327221F1E00030EF7 /* Historic */ = {
+			isa = PBXGroup;
+			children = (
+				64F2F3362722203A00030EF7 /* View */,
+				64F2F33427221F3400030EF7 /* HistoricViewController.swift */,
+			);
+			path = Historic;
+			sourceTree = "<group>";
+		};
+		64F2F3362722203A00030EF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64F2F3372722232E00030EF7 /* HistoricView.swift */,
+				64F2F3392722490300030EF7 /* RangoCustomCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6692A9F82721F55E00C5E899 /* Filter */ = {
@@ -555,10 +580,13 @@
 				5FC522FF271CFBD100DC2B7A /* AppDelegate.swift in Sources */,
 				DCCEB9182720F1D800B70846 /* SugestionViewController.swift in Sources */,
 				030D4CF92720EA85007753D1 /* ExtensionUIView.swift in Sources */,
+				64F2F33A2722490300030EF7 /* RangoCustomCell.swift in Sources */,
 				030D4D0227222669007753D1 /* ButtonViewController.swift in Sources */,
 				5F70D8F2271DE3CB002128A3 /* HomeRouter.swift in Sources */,
 				5FC52301271CFBD100DC2B7A /* SceneDelegate.swift in Sources */,
 				5FC52331271D066700DC2B7A /* HomeViewController.swift in Sources */,
+				64F2F33527221F3400030EF7 /* HistoricViewController.swift in Sources */,
+				64F2F3382722232E00030EF7 /* HistoricView.swift in Sources */,
 				5FC5233B271DCE7C00DC2B7A /* ButtonCell.swift in Sources */,
 				5FC52337271DCE6D00DC2B7A /* TextFieldCell.swift in Sources */,
 			);

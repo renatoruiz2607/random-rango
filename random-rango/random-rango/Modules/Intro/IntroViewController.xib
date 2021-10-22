@@ -30,7 +30,7 @@ para a galera e também para os
 apaixonados que não sabem
 onde jantar</string>
                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                            <color key="textColor" red="0.90980392160000001" green="0.41960784309999999" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.87843137979999997" green="0.52941179279999995" blue="0.44705885649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGL-IR-230">
