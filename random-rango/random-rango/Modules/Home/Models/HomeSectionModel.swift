@@ -10,12 +10,13 @@ import UIKit
 
 enum HomeSectionModel: Int {
 
-    static var totalSections: Int { return HomeSectionModel.signUp.rawValue + 1}
+    static var totalSections: Int { return HomeSectionModel.sugestion.rawValue + 1}
     case inputEmail = 0
     case inputPassword = 1
     case forgotPass = 2
     case login = 3
     case signUp = 4
+    case sugestion = 5
     
     var rowsSize: CGFloat {
         return UITableView.automaticDimension
