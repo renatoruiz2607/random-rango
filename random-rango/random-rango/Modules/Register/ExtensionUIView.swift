@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 extension UIView {
-<<<<<<< HEAD
     func roundCorners(cornerRadius: CGFloat, typeCorners: CACornerMask) {
         self.layer.cornerRadius = cornerRadius
         self.layer.maskedCorners = typeCorners
@@ -17,39 +16,10 @@ extension UIView {
     }
     
 }
-    
-    extension CACornerMask {
-        static public let inferiorDireito:CACornerMask = . layerMaxXMinYCorner
-        static public let inferiorEsquerdo:CACornerMask = .layerMinXMaxYCorner
-        static public let superiorDireito:CACornerMask = .layerMaxXMinYCorner
-        static public let superiorEsquerdo:CACornerMask = .layerMinXMinYCorner
-=======
-//    func roundCorners(cornerRadius: CGFloat, typeCorners: CACornerMask) {
-//        self.layer.cornerRadius = cornerRadius
-//        self.layer.maskedCorners = typeCorners
-//        self.clipsToBounds = true
-//}
-    
-//    extension CACornerMask {
-//        static public let inferiorDireito:CACornerMask = . layerMaxXMinYCorner
-//       // static public let
-//    }
-
-
-func roundCorners(cornerRadius: CGFloat, typeCorners: CACornerMask) {
-    self.layer.cornerRadius = cornerRadius // tamanho do raio de arredondamento
-    self.layer.maskedCorners = typeCorners // qual posição da view que quer setar
-    self.clipsToBounds = true
-}
-
-}
 
 extension CACornerMask {
-static public let inferiorDireito:CACornerMask = .layerMaxXMaxYCorner
-static public let inferiorEsquerdo:CACornerMask = .layerMinXMaxYCorner
-static public let superiorDireito:CACornerMask = .layerMaxXMinYCorner
-static public let superiorEsquerdo:CACornerMask = .layerMinXMinYCorner
-
->>>>>>> develop
-
+    static public let inferiorDireito:CACornerMask = . layerMaxXMinYCorner
+    static public let inferiorEsquerdo:CACornerMask = .layerMinXMaxYCorner
+    static public let superiorDireito:CACornerMask = .layerMaxXMinYCorner
+    static public let superiorEsquerdo:CACornerMask = .layerMinXMinYCorner
 }
