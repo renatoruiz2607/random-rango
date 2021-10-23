@@ -45,7 +45,7 @@ class RegisterViewController: UIViewController {
         confirmarSenhaTextField.layer.borderColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00).cgColor
         confirmarSenhaTextField.clipsToBounds = true
         
-        criarCadastroButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
+        criarCadastroButton.tintColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)//(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
         }
         
         func setup(title: String, hasBackground: Bool) {
