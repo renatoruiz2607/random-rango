@@ -16,11 +16,10 @@ extension UIView {
     }
     
 }
-    
-    extension CACornerMask {
-        static public let inferiorDireito:CACornerMask = . layerMaxXMinYCorner
-        static public let inferiorEsquerdo:CACornerMask = .layerMinXMaxYCorner
-        static public let superiorDireito:CACornerMask = .layerMaxXMinYCorner
-        static public let superiorEsquerdo:CACornerMask = .layerMinXMinYCorner
 
+extension CACornerMask {
+    static public let inferiorDireito:CACornerMask = . layerMaxXMinYCorner
+    static public let inferiorEsquerdo:CACornerMask = .layerMinXMaxYCorner
+    static public let superiorDireito:CACornerMask = .layerMaxXMinYCorner
+    static public let superiorEsquerdo:CACornerMask = .layerMinXMinYCorner
 }

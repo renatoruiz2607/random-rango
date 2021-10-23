@@ -23,8 +23,9 @@ class HomeViewController: UIViewController {
     
     enum Route: String {
         case login
-//        case forgotPass
-//        case signUp
+        case forgotPass
+        case signUp
+        case sugestion
     }
     
     public init(router: HomeRouter) {
@@ -81,6 +82,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case HomeSectionModel.forgotPass.rawValue:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonCell", for: indexPath) as? ButtonCell else { return UITableViewCell() }
             cell.setup(title: "Esqueceu a senha?", hasBackground: false)
+            
+            cell.genericButton.rx.tap
+                .bind { [unowned self] in
+                    self.router.route(to: Route.forgotPass.rawValue, from: self, parameters: nil)
+                }
+                .disposed(by: self.disposeBag)
+            
             return cell
         case HomeSectionModel.login.rawValue:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonCell", for: indexPath) as? ButtonCell else { return UITableViewCell() }
@@ -96,6 +104,24 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case HomeSectionModel.signUp.rawValue:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonCell", for: indexPath) as? ButtonCell else { return UITableViewCell() }
             cell.setup(title: "Crie seu cadastro", hasBackground: false)
+            
+            cell.genericButton.rx.tap
+                .bind { [unowned self] in
+                    self.router.route(to: Route.signUp.rawValue, from: self, parameters: nil)
+                }
+                .disposed(by: self.disposeBag)
+            
+            return cell
+        case HomeSectionModel.sugestion.rawValue:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonCell", for: indexPath) as? ButtonCell else { return UITableViewCell() }
+            cell.setup(title: "Tela de sugestão", hasBackground: false)
+            
+            cell.genericButton.rx.tap
+                .bind { [unowned self] in
+                    self.router.route(to: Route.sugestion.rawValue, from: self, parameters: nil)
+                }
+                .disposed(by: self.disposeBag)
+            
             return cell
         default:
             return UITableViewCell()
