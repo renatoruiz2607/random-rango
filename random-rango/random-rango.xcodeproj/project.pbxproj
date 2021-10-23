@@ -12,6 +12,8 @@
 		030D4CF92720EA85007753D1 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D4CF82720EA85007753D1 /* ExtensionUIView.swift */; };
 		030D4D0227222669007753D1 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D4D0027222669007753D1 /* ButtonViewController.swift */; };
 		030D4D0327222669007753D1 /* ButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030D4D0127222669007753D1 /* ButtonViewController.xib */; };
+		030D4D0A2723A21D007753D1 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D4D082723A21D007753D1 /* ForgotPasswordViewController.swift */; };
+		030D4D0B2723A21D007753D1 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030D4D092723A21D007753D1 /* ForgotPasswordViewController.xib */; };
 		5F70D8F2271DE3CB002128A3 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F70D8F1271DE3CB002128A3 /* HomeRouter.swift */; };
 		5F70D8F6271DED31002128A3 /* RouterTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F70D8F4271DED31002128A3 /* RouterTestViewController.swift */; };
 		5F70D8F7271DED31002128A3 /* RouterTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F70D8F5271DED31002128A3 /* RouterTestViewController.xib */; };
@@ -62,6 +64,8 @@
 		030D4CF82720EA85007753D1 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		030D4D0027222669007753D1 /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		030D4D0127222669007753D1 /* ButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonViewController.xib; sourceTree = "<group>"; };
+		030D4D082723A21D007753D1 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		030D4D092723A21D007753D1 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		0363157DB2CB1892415A7ACC /* Pods-random-rangoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rangoTests.debug.xcconfig"; path = "Target Support Files/Pods-random-rangoTests/Pods-random-rangoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1FFDAC11D759135ADF8F6FE5 /* Pods-random-rangoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rangoTests.release.xcconfig"; path = "Target Support Files/Pods-random-rangoTests/Pods-random-rangoTests.release.xcconfig"; sourceTree = "<group>"; };
 		2AFEF16147A4E4795FDB91A7 /* Pods_random_rangoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_random_rangoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +139,8 @@
 				030D4CF82720EA85007753D1 /* ExtensionUIView.swift */,
 				030D4D0027222669007753D1 /* ButtonViewController.swift */,
 				030D4D0127222669007753D1 /* ButtonViewController.xib */,
+				030D4D082723A21D007753D1 /* ForgotPasswordViewController.swift */,
+				030D4D092723A21D007753D1 /* ForgotPasswordViewController.xib */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				5FC52338271DCE6D00DC2B7A /* TextFieldCell.xib in Resources */,
 				030D4D0327222669007753D1 /* ButtonViewController.xib in Resources */,
 				5F70D8F7271DED31002128A3 /* RouterTestViewController.xib in Resources */,
+				030D4D0B2723A21D007753D1 /* ForgotPasswordViewController.xib in Resources */,
 				030D4CF52720E573007753D1 /* RegisterViewController.xib in Resources */,
 				DCCEB9192720F1D800B70846 /* SugestionViewController.xib in Resources */,
 			);
@@ -542,6 +549,7 @@
 				030D4D0227222669007753D1 /* ButtonViewController.swift in Sources */,
 				5F70D8F2271DE3CB002128A3 /* HomeRouter.swift in Sources */,
 				5FC52301271CFBD100DC2B7A /* SceneDelegate.swift in Sources */,
+				030D4D0A2723A21D007753D1 /* ForgotPasswordViewController.swift in Sources */,
 				5FC52331271D066700DC2B7A /* HomeViewController.swift in Sources */,
 				5FC5233B271DCE7C00DC2B7A /* ButtonCell.swift in Sources */,
 				5FC52337271DCE6D00DC2B7A /* TextFieldCell.swift in Sources */,

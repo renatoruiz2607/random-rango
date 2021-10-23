@@ -18,7 +18,7 @@ class HomeRouter {
         case .login:
 //            let vm =
 //            let router =
-            let vc = RegisterViewController()
+            let vc = ForgotPasswordViewController()
 //            vc.modalPresentationStyle = .fullScreen
             context.navigationController?.show(vc, sender: nil)
         }
