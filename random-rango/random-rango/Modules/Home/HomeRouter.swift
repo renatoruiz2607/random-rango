@@ -18,8 +18,9 @@ class HomeRouter {
         case .login:
 //            let vm =
 //            let router =
-            let vc = FilterViewController()
+            let vc = HistoricViewController()
 //            vc.modalPresentationStyle = .fullScreen
+            vc.view.backgroundColor = .white
             context.navigationController?.show(vc, sender: nil)
         }
     }
