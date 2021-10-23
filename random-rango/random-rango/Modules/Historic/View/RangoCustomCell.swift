@@ -9,14 +9,11 @@ import Foundation
 import UIKit
 
 class RangoCustomCell : UIView {
-    
-    var texto = ""
-    
-    lazy var label : UILabel = {
+        
+    private let label : UILabel = {
         let label = UILabel()
         label.textColor = .black
         label.textAlignment = .center
-        label.text = texto
         return label
     }()
     
@@ -26,6 +23,10 @@ class RangoCustomCell : UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
         label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
+    }
+    
+    func setText(text : String){
+        label.text = text
     }
     
     required init?(coder: NSCoder) {
