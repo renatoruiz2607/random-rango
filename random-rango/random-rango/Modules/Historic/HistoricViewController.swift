@@ -11,7 +11,11 @@ import UIKit
 
 class HistoricViewController : UIViewController{
     
-    let historics =  ["Texto1", "texto2", "texto3", "texto4"]
+    let historics : [Historic] = [
+        .init(title: "Restaurante tal", address: "Av. bento gonçalves", stars: 4),
+        .init(title: "Teste", address: "Teste2", stars: 5),
+        .init(title: "Test3", address: "teste3", stars: 1)
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,19 +23,31 @@ class HistoricViewController : UIViewController{
         let historicView = HistoricView(frame: frameViewPai)
         self.view.addSubview(historicView)
         historicView.historicTableView.dataSource = self
+        historicView.historicTableView.delegate = self
+        historicView.historicTableView.register(HistoricCell.self, forCellReuseIdentifier: "historicCell")
     }
 }
 
 extension HistoricViewController : UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return historics.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        let historicCell = RangoCustomCell(frame: cell.frame)
-        historicCell.setText(text: historics[indexPath.row])
-        cell.addSubview(historicCell)
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "historicCell", for: indexPath) as? HistoricCell {
+            cell.backgroundColor = .clear
+            let historicCell = RangoCustomCell(frame: CGRect.init(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height))
+            historicCell.setHistoric(historic: historics[indexPath.row])
+            cell.addSubview(historicCell)
+            return cell
+        }
+        return UITableViewCell()
+    }
+}
+
+extension HistoricViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
