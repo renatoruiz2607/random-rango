@@ -10,6 +10,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="random_rango" customModuleProvider="target">
             <connections>
+                <outlet property="emailTextField" destination="sWa-sh-4b6" id="MeE-5t-Y7K"/>
+                <outlet property="forgotPassButton" destination="BNW-jE-1jN" id="eYk-LO-N4A"/>
+                <outlet property="loginButton" destination="yjy-6x-ZhW" id="qDV-28-oaW"/>
+                <outlet property="logoImage" destination="OxJ-Xf-LtB" id="H0a-WM-qkM"/>
+                <outlet property="passwordTextField" destination="2LJ-dN-uG2" id="Cwx-Nk-8K1"/>
+                <outlet property="scrollContentView" destination="oUY-51-CqN" id="hEN-kB-bCd"/>
+                <outlet property="scrollView" destination="c5j-Vd-NNd" id="hcW-fy-I7k"/>
+                <outlet property="separatorLabel" destination="5Io-Kq-7VM" id="3b0-ni-REq"/>
+                <outlet property="signUpButton" destination="kIK-uB-2qv" id="puy-vQ-SBv"/>
+                <outlet property="socialMediaFirstImage" destination="Knf-tU-Yer" id="9Sg-jG-TU2"/>
+                <outlet property="socialMediaSecondImage" destination="6eh-pT-6S3" id="DcI-04-K3r"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,20 +41,20 @@
                                         <constraint firstAttribute="height" constant="100" id="1TO-hw-BoW"/>
                                     </constraints>
                                 </imageView>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sWa-sh-4b6">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sWa-sh-4b6">
                                     <rect key="frame" x="24" y="190" width="366" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="iM0-O8-4f3"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2LJ-dN-uG2">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2LJ-dN-uG2">
                                     <rect key="frame" x="24" y="264" width="366" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="6w1-Ly-Hyc"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNW-jE-1jN">
@@ -51,24 +62,27 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="lDl-fW-IIW"/>
                                     </constraints>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Esqueceu a senha?"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjy-6x-ZhW">
                                     <rect key="frame" x="74" y="424" width="266" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="Y4F-fs-i7Q"/>
                                     </constraints>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Entrar"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIK-uB-2qv">
                                     <rect key="frame" x="74" y="500" width="266" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="9dd-gR-hwe"/>
                                     </constraints>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Crie seu cadastro"/>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sy8-4R-Coc">
                                     <rect key="frame" x="40" y="586" width="334" height="4"/>
@@ -83,7 +97,7 @@
                                         <constraint firstAttribute="height" constant="28" id="LYs-kK-pC8"/>
                                         <constraint firstAttribute="width" constant="60" id="rWq-7t-tQz"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -101,7 +115,6 @@
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="Knf-tU-Yer" secondAttribute="bottom" id="6Gm-NJ-25V"/>
                                                 <constraint firstAttribute="trailing" secondItem="Knf-tU-Yer" secondAttribute="trailing" id="hVA-7a-euR"/>
@@ -119,7 +132,6 @@
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="6eh-pT-6S3" secondAttribute="bottom" id="GRn-RB-3xY"/>
                                                 <constraint firstItem="6eh-pT-6S3" firstAttribute="top" secondItem="Kzv-kl-Mkc" secondAttribute="top" id="Ohr-Mh-B26"/>
