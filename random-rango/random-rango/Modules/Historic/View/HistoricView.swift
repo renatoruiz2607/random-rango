@@ -11,6 +11,8 @@ class HistoricView : UIView{
     
     private var historics : [String] = []
     
+    private let red = UIColor(red: 0.76, green: 0.30, blue: 0.29, alpha: 1.00)
+    
     private let header : UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "appLogo")
@@ -18,11 +20,11 @@ class HistoricView : UIView{
         return image
     }()
     
-    private let subtitle : UILabel = {
+    private lazy var subtitle : UILabel = {
         let label = UILabel()
         label.text = "Meus últimos rangos"
         label.textAlignment = .center
-        label.textColor = .red
+        label.textColor = red
         return label
     }()
     
@@ -33,9 +35,9 @@ class HistoricView : UIView{
     }()
     
     
-    private let backButton : UIButton = {
+    private lazy var backButton : UIButton = {
         let button = UIButton()
-        button.backgroundColor = UIColor(red: 0.76, green: 0.30, blue: 0.29, alpha: 1.00)
+        button.backgroundColor = red
         button.setTitle("Voltar", for: .normal)
         let yellow = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
         button.setTitleColor(yellow, for: .normal)
@@ -54,10 +56,6 @@ class HistoricView : UIView{
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setHistorics(newHistorics : [String]) {
-        historics = newHistorics
-        historicTableView.reloadData()
-    }
     
     private func initView() {
         self.addSubview(header)
