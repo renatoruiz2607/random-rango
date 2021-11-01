@@ -58,14 +58,11 @@ class FilterViewController: UIViewController {
     }
     
     @IBAction func buscaButtonAction(_ sender: Any) {
-        var novoArray: Array<Any> = []
         service.getRestaurant() { model in
-            for result in model {
-                if model.contains(where: {value -> Bool in value.estilo.rawValue == 0}) {
-                    novoArray.append(result)
-                }
+            let filtered = model.filter{ resultado in
+                resultado.estilo.rawValue == 0
             }
-            print(novoArray.randomElement())
+            print(filtered.randomElement() as Any)
         }
     }
 }
