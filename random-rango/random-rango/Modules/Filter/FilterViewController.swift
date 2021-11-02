@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class FilterViewController: UIViewController {
 
@@ -18,7 +19,6 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var tituloLabel: UILabel!
     
     let service: FilterService = .init()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +58,12 @@ class FilterViewController: UIViewController {
     }
     
     @IBAction func buscaButtonAction(_ sender: Any) {
-        print(service)
+        service.getRestaurant() { model in
+            let filtered = model.filter{ resultado in
+                resultado.estilo.rawValue == 0
+            }
+            print(filtered.randomElement() as Any)
+        }
     }
 }
 
