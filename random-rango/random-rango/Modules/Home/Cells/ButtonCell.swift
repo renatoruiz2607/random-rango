@@ -25,8 +25,9 @@ class ButtonCell: UITableViewCell {
         genericButton.setTitle(title, for: .normal)
         
         if hasBackground {
-            genericButton.backgroundColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
+            genericButton.backgroundColor = UIColor(red: 0.89, green: 0.24, blue: 0.25, alpha: 0.80)
             genericButton.layer.cornerRadius = 25.0
+            genericButton.tintColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
         }
     }
 }

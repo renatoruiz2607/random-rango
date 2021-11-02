@@ -17,6 +17,8 @@
 		0390A070272EDCAC00FB1B2F /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390A06F272EDCAC00FB1B2F /* FilterModel.swift */; };
 		0390A073272EDD5A00FB1B2F /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390A072272EDD5A00FB1B2F /* FilterService.swift */; };
 		0390A075272EE2E100FB1B2F /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390A074272EE2E100FB1B2F /* FilterViewModel.swift */; };
+		0390A0782731705600FB1B2F /* SugestaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390A0762731705600FB1B2F /* SugestaoViewController.swift */; };
+		0390A0792731705600FB1B2F /* SugestaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0390A0772731705600FB1B2F /* SugestaoViewController.xib */; };
 		5F683B9D27288126008E35AF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F683B9C27288126008E35AF /* LoginRouter.swift */; };
 		5F70D8F2271DE3CB002128A3 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F70D8F1271DE3CB002128A3 /* HomeRouter.swift */; };
 		5F70D8F6271DED31002128A3 /* RouterTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F70D8F4271DED31002128A3 /* RouterTestViewController.swift */; };
@@ -83,6 +85,8 @@
 		0390A06F272EDCAC00FB1B2F /* FilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
 		0390A072272EDD5A00FB1B2F /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
 		0390A074272EE2E100FB1B2F /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		0390A0762731705600FB1B2F /* SugestaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugestaoViewController.swift; sourceTree = "<group>"; };
+		0390A0772731705600FB1B2F /* SugestaoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SugestaoViewController.xib; sourceTree = "<group>"; };
 		1FFDAC11D759135ADF8F6FE5 /* Pods-random-rangoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rangoTests.release.xcconfig"; path = "Target Support Files/Pods-random-rangoTests/Pods-random-rangoTests.release.xcconfig"; sourceTree = "<group>"; };
 		2AFEF16147A4E4795FDB91A7 /* Pods_random_rangoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_random_rangoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F683B9C27288126008E35AF /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -353,6 +357,8 @@
 			children = (
 				DCCEB9162720F1D800B70846 /* SugestionViewController.swift */,
 				DCCEB9172720F1D800B70846 /* SugestionViewController.xib */,
+				0390A0762731705600FB1B2F /* SugestaoViewController.swift */,
+				0390A0772731705600FB1B2F /* SugestaoViewController.xib */,
 			);
 			path = Sugestion;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 				030D4D0B2723A21D007753D1 /* ForgotPasswordViewController.xib in Resources */,
 				030D4CF52720E573007753D1 /* RegisterViewController.xib in Resources */,
 				DCCEB9192720F1D800B70846 /* SugestionViewController.xib in Resources */,
+				0390A0792731705600FB1B2F /* SugestaoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +649,7 @@
 				5FC52331271D066700DC2B7A /* HomeViewController.swift in Sources */,
 				64F2F33527221F3400030EF7 /* HistoricViewController.swift in Sources */,
 				64F2F3382722232E00030EF7 /* HistoricView.swift in Sources */,
+				0390A0782731705600FB1B2F /* SugestaoViewController.swift in Sources */,
 				5FC5233B271DCE7C00DC2B7A /* ButtonCell.swift in Sources */,
 				5FC52337271DCE6D00DC2B7A /* TextFieldCell.swift in Sources */,
 				6480E9A6272776BE008C230A /* Historic.swift in Sources */,

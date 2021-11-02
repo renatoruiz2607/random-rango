@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IntroViewController" customModule="random_rango" customModuleProvider="target">
             <connections>
+                <outlet property="circuloLayer" destination="Tjd-oF-5e9" id="CHt-QU-1WP"/>
                 <outlet property="introBackgroundView" destination="I4d-am-xrs" id="mBE-rC-vSf"/>
                 <outlet property="skipButton" destination="pGL-IR-230" id="4Pd-Hc-aA8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -34,9 +35,9 @@ onde jantar</string>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGL-IR-230">
-                            <rect key="frame" x="322" y="809" width="76" height="31"/>
+                            <rect key="frame" x="315.5" y="809" width="82.5" height="31"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Avançar"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Começar"/>
                             <connections>
                                 <action selector="skipButtonAction:" destination="-1" eventType="touchUpInside" id="XUs-BB-96f"/>
                             </connections>
@@ -49,11 +50,20 @@ randomizador de rango</string>
                             <color key="textColor" red="0.90980392156862744" green="0.41960784313725491" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="point" translatesAutoresizingMaskIntoConstraints="NO" id="uh0-It-Pux">
+                            <rect key="frame" x="-49" y="0.0" width="519" height="575"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tjd-oF-5e9">
+                            <rect key="frame" x="77" y="130" width="261" height="248"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="yCV-CT-4vC" firstAttribute="leading" secondItem="I4d-am-xrs" secondAttribute="leading" constant="24" id="2pP-w4-5KU"/>
                         <constraint firstItem="xZU-EV-QEL" firstAttribute="leading" secondItem="I4d-am-xrs" secondAttribute="leading" constant="24" id="AEE-9E-UG0"/>
+                        <constraint firstItem="pGL-IR-230" firstAttribute="leading" secondItem="I4d-am-xrs" secondAttribute="leading" constant="315.5" id="C3q-4y-jSv"/>
                         <constraint firstItem="pGL-IR-230" firstAttribute="top" secondItem="yCV-CT-4vC" secondAttribute="bottom" constant="24" id="IUP-92-qLb"/>
                         <constraint firstAttribute="bottom" secondItem="pGL-IR-230" secondAttribute="bottom" constant="56" id="SIO-G0-kuS"/>
                         <constraint firstAttribute="trailing" secondItem="yCV-CT-4vC" secondAttribute="trailing" constant="24" id="URr-9X-mfh"/>
@@ -75,6 +85,7 @@ randomizador de rango</string>
         </view>
     </objects>
     <resources>
+        <image name="point" width="236.5" height="263.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

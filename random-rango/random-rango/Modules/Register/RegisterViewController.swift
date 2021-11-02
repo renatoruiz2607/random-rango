@@ -23,7 +23,7 @@ class RegisterViewController: UIViewController {
     func setupUI() {
         
         criarCadastroButton.layer.borderColor = UIColor.clear.cgColor
-        criarCadastroButton.backgroundColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
+        criarCadastroButton.backgroundColor = UIColor(red: 0.89, green: 0.24, blue: 0.25, alpha: 0.80)
         view.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00)
         criarCadastroButton.layer.cornerRadius = 25.0
         criarCadastroButton.layer.borderWidth = 1

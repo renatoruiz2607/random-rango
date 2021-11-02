@@ -37,7 +37,7 @@ class FilterViewController: UIViewController {
   
     }
     
-    func buttonConfig(buttonNeed: UIButton){
+    public func buttonConfig(buttonNeed: UIButton){
         buscarButtonLayout.layer.cornerRadius = 25.0
         buscarButtonLayout.layer.borderWidth = 1
         buscarButtonLayout.layer.borderColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00).cgColor
@@ -49,11 +49,11 @@ class FilterViewController: UIViewController {
     
     func segmentConfig(segmentNeed: UISegmentedControl){
         segmentNeed.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.89, alpha: 1.00)
-        segmentNeed.selectedSegmentTintColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
+        segmentNeed.selectedSegmentTintColor = UIColor(red: 0.89, green: 0.24, blue: 0.25, alpha: 0.80)
         segmentNeed.tintColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
         segmentNeed.layer.borderColor = CGColor(red: 0.93, green: 0.67, blue: 0.60, alpha: 1.00)
-        segmentNeed.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.yellow], for: .normal)
-        segmentNeed.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.blue], for: .selected)
+        segmentNeed.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)], for: .normal)
+        segmentNeed.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)], for: .selected)
         
     }
     
