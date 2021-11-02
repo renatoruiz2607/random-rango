@@ -33,7 +33,7 @@ class ForgotPasswordViewController: UIViewController {
         emailUsuarioTextField.clipsToBounds = true
         
         enviarLinkButton.tintColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
-        enviarLinkButton.backgroundColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
+        enviarLinkButton.backgroundColor = UIColor(red: 0.89, green: 0.24, blue: 0.25, alpha: 0.80)
         enviarLinkButton.layer.cornerRadius = 25.0
         enviarLinkButton.layer.borderWidth = 1
         enviarLinkButton.layer.borderColor = UIColor.clear.cgColor

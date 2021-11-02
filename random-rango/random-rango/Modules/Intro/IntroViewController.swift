@@ -11,8 +11,9 @@ class IntroViewController: UIViewController {
 
     @IBOutlet weak var introBackgroundView: UIView!
     @IBOutlet weak var skipButton: UIButton!
+    @IBOutlet weak var circuloLayer: UIImageView!
     
-    var backgroundImage = UIImageView()
+//    var backgroundImage = UIImageView()
     
     let router: IntroRouter
     
@@ -35,13 +36,31 @@ class IntroViewController: UIViewController {
     }
     
     func setup() {
-        backgroundImage.removeFromSuperview()
-        backgroundImage = UIImageView(frame: introBackgroundView.bounds)
-        backgroundImage.image = UIImage(named: "introBackground")
-        backgroundImage.contentMode =  UIView.ContentMode.scaleToFill
-        introBackgroundView.layer.masksToBounds = true
-        introBackgroundView.addSubview(backgroundImage)
-        introBackgroundView.sendSubviewToBack(backgroundImage)
+        introBackgroundView.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00)
+        
+//        backgroundImage.removeFromSuperview()
+//        backgroundImage = UIImageView(frame: introBackgroundView.bounds)
+//        backgroundImage.image = UIImage(named: "introBackground")
+//        backgroundImage.contentMode =  UIView.ContentMode.scaleToFill
+//        introBackgroundView.layer.masksToBounds = true
+//        introBackgroundView.addSubview(backgroundImage)
+//        introBackgroundView.sendSubviewToBack(backgroundImage)
+       
+        
+        skipButton.layer.cornerRadius = 16.0
+        skipButton.layer.borderWidth = 1
+        skipButton.layer.borderColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00).cgColor
+        skipButton.clipsToBounds = true
+        skipButton.layer.borderColor = UIColor.clear.cgColor
+        skipButton.backgroundColor = UIColor(red: 0.89, green: 0.24, blue: 0.25, alpha: 0.80)
+        skipButton.tintColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
+        
+        circuloLayer.layer.cornerRadius = 124.0
+        circuloLayer.layer.borderWidth = 0.5
+        circuloLayer.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00)
+        circuloLayer.layer.borderColor = UIColor.clear.cgColor
+        
+        
     }
     
     @IBAction func skipButtonAction(_ sender: Any) {

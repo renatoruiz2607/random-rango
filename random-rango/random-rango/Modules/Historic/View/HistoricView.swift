@@ -11,7 +11,7 @@ class HistoricView : UIView{
     
     private var historics : [String] = []
     
-    private let red = UIColor(red: 0.76, green: 0.30, blue: 0.29, alpha: 1.00)
+    private let red = UIColor(red: 0.89, green: 0.24, blue: 0.25, alpha: 0.80)
     
     private let header : UIImageView = {
         let image = UIImageView()
