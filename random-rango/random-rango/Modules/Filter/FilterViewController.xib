@@ -11,11 +11,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterViewController" customModule="random_rango" customModuleProvider="target">
             <connections>
                 <outlet property="buscarButtonLayout" destination="VUs-M9-mqI" id="E64-9e-e7R"/>
-                <outlet property="companhiaSegment" destination="vnr-iF-vYq" id="mb5-J9-gyD"/>
                 <outlet property="estiloSegment" destination="MrO-ln-GLS" id="Mft-vG-oD7"/>
-                <outlet property="periodoSegment" destination="8eZ-5w-lZH" id="f62-nv-l3O"/>
-                <outlet property="precoSegment" destination="az3-iz-lUD" id="ECd-MC-s6v"/>
+                <outlet property="quantidadePessoasSegment" destination="vnr-iF-vYq" id="Hvk-NI-iQq"/>
+                <outlet property="refeicaoSegment" destination="8eZ-5w-lZH" id="WmT-aA-xhO"/>
                 <outlet property="tituloLabel" destination="yLm-aw-DIp" id="qmi-48-dIC"/>
+                <outlet property="valorSegment" destination="az3-iz-lUD" id="h6S-il-wKf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -71,9 +71,9 @@
                         <constraint firstAttribute="height" constant="31" id="OuR-9X-vYC"/>
                     </constraints>
                     <segments>
-                        <segment title="$"/>
-                        <segment title="$$"/>
-                        <segment title="$$$"/>
+                        <segment title="Barato"/>
+                        <segment title="Médio"/>
+                        <segment title="Caro"/>
                     </segments>
                     <color key="selectedSegmentTintColor" red="0.88831752539999997" green="0.2412111461" blue="0.25069054959999998" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                 </segmentedControl>
@@ -83,8 +83,8 @@
                         <constraint firstAttribute="height" constant="31" id="Apg-VR-qMT"/>
                     </constraints>
                     <segments>
-                        <segment title="Normal"/>
-                        <segment title="Com emoção"/>
+                        <segment title="Tradicional"/>
+                        <segment title="Exótico"/>
                     </segments>
                     <color key="selectedSegmentTintColor" red="0.8901960784313725" green="0.24313725490196078" blue="0.25098039215686274" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                 </segmentedControl>

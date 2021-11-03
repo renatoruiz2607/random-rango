@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,25 +23,23 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paT-nh-X2u">
-                    <rect key="frame" x="90" y="737" width="234" height="50"/>
+                    <rect key="frame" x="74" y="737" width="266" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="8Xu-lO-br6"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Atualizar"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Atualizar"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8p4-gc-i58">
-                    <rect key="frame" x="50" y="603" width="315" height="100"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="100" id="8F6-F4-j4I"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <rect key="frame" x="24" y="674" width="366" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo Restaurante" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZX-jV-VsL">
-                    <rect key="frame" x="48" y="508" width="318" height="54"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <rect key="frame" x="24" y="626.5" width="366" height="31.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -65,25 +63,21 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9ZX-jV-VsL" secondAttribute="trailing" constant="48" id="0tf-02-baQ"/>
-                <constraint firstItem="9ZX-jV-VsL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="48" id="1Fn-8D-bVY"/>
-                <constraint firstItem="8p4-gc-i58" firstAttribute="top" secondItem="9ZX-jV-VsL" secondAttribute="bottom" constant="41" id="4Kq-C9-9DZ"/>
+                <constraint firstItem="8p4-gc-i58" firstAttribute="top" secondItem="9ZX-jV-VsL" secondAttribute="bottom" constant="16" id="4Kq-C9-9DZ"/>
                 <constraint firstItem="Apz-Je-9FZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8F1-fI-HJI"/>
                 <constraint firstItem="k2V-w7-5fk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="AeE-uo-pkz"/>
-                <constraint firstItem="9ZX-jV-VsL" firstAttribute="top" secondItem="k2V-w7-5fk" secondAttribute="bottom" constant="166" id="Bha-a5-t6n"/>
-                <constraint firstItem="9ZX-jV-VsL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="48" id="FHj-4g-TD4"/>
+                <constraint firstItem="9ZX-jV-VsL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="FHj-4g-TD4"/>
                 <constraint firstItem="k2V-w7-5fk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="48" id="HR8-Pw-WEh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="k2V-w7-5fk" secondAttribute="trailing" constant="48" id="KlK-Ah-hjV"/>
                 <constraint firstItem="Apz-Je-9FZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-42" id="RVs-9R-yBg"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9ZX-jV-VsL" secondAttribute="trailing" constant="48" id="UD8-SX-xio"/>
-                <constraint firstItem="paT-nh-X2u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="90" id="Zls-iS-h2W"/>
-                <constraint firstItem="8p4-gc-i58" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="Zna-XP-2ya"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9ZX-jV-VsL" secondAttribute="trailing" constant="24" id="UD8-SX-xio"/>
+                <constraint firstItem="paT-nh-X2u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="74" id="Zls-iS-h2W"/>
+                <constraint firstItem="8p4-gc-i58" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="Zna-XP-2ya"/>
                 <constraint firstAttribute="trailing" secondItem="Apz-Je-9FZ" secondAttribute="trailing" constant="-52" id="gf8-Eo-M1V"/>
-                <constraint firstItem="9ZX-jV-VsL" firstAttribute="top" secondItem="Apz-Je-9FZ" secondAttribute="bottom" constant="5" id="hxS-1y-gfk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="paT-nh-X2u" secondAttribute="bottom" constant="75" id="l7b-WM-oIh"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8p4-gc-i58" secondAttribute="trailing" constant="49" id="pcO-yk-ab2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8p4-gc-i58" secondAttribute="trailing" constant="24" id="pcO-yk-ab2"/>
                 <constraint firstItem="paT-nh-X2u" firstAttribute="top" secondItem="8p4-gc-i58" secondAttribute="bottom" constant="34" id="sgg-0d-uVS"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="paT-nh-X2u" secondAttribute="trailing" constant="90" id="ujZ-8T-aNs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="paT-nh-X2u" secondAttribute="trailing" constant="74" id="ujZ-8T-aNs"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="108.48214285714285"/>
         </view>

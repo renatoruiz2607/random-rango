@@ -13,7 +13,7 @@ class IntroViewController: UIViewController {
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var circuloLayer: UIImageView!
     
-//    var backgroundImage = UIImageView()
+    var backgroundImage = UIImageView()
     
     let router: IntroRouter
     
@@ -36,18 +36,19 @@ class IntroViewController: UIViewController {
     }
     
     func setup() {
+        view.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00)
         introBackgroundView.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00)
         
-//        backgroundImage.removeFromSuperview()
-//        backgroundImage = UIImageView(frame: introBackgroundView.bounds)
-//        backgroundImage.image = UIImage(named: "introBackground")
-//        backgroundImage.contentMode =  UIView.ContentMode.scaleToFill
-//        introBackgroundView.layer.masksToBounds = true
-//        introBackgroundView.addSubview(backgroundImage)
-//        introBackgroundView.sendSubviewToBack(backgroundImage)
+        backgroundImage.removeFromSuperview()
+        backgroundImage = UIImageView(frame: introBackgroundView.bounds)
+        backgroundImage.image = UIImage(named: "imageBackground")
+        backgroundImage.contentMode =  UIView.ContentMode.scaleToFill
+        introBackgroundView.layer.masksToBounds = true
+        introBackgroundView.addSubview(backgroundImage)
+        introBackgroundView.sendSubviewToBack(backgroundImage)
        
         
-        skipButton.layer.cornerRadius = 16.0
+        skipButton.layer.cornerRadius = 15.0
         skipButton.layer.borderWidth = 1
         skipButton.layer.borderColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00).cgColor
         skipButton.clipsToBounds = true

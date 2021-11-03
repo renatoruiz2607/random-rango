@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +25,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCV-CT-4vC">
-                            <rect key="frame" x="24" y="684.5" width="366" height="100.5"/>
+                            <rect key="frame" x="24" y="685.5" width="366" height="100.5"/>
                             <string key="text">Para os aventureiros da gastronomia
 para a galera e também para os
 apaixonados que não sabem
@@ -35,7 +35,10 @@ onde jantar</string>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGL-IR-230">
-                            <rect key="frame" x="315.5" y="809" width="82.5" height="31"/>
+                            <rect key="frame" x="315.5" y="810" width="82.5" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="mG4-Gj-cJb"/>
+                            </constraints>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Começar"/>
                             <connections>
@@ -43,7 +46,7 @@ onde jantar</string>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZU-EV-QEL">
-                            <rect key="frame" x="24" y="577" width="366" height="57.5"/>
+                            <rect key="frame" x="24" y="578" width="366" height="57.5"/>
                             <string key="text">Bem-vindo  ao seu
 randomizador de rango</string>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
@@ -63,7 +66,6 @@ randomizador de rango</string>
                     <constraints>
                         <constraint firstItem="yCV-CT-4vC" firstAttribute="leading" secondItem="I4d-am-xrs" secondAttribute="leading" constant="24" id="2pP-w4-5KU"/>
                         <constraint firstItem="xZU-EV-QEL" firstAttribute="leading" secondItem="I4d-am-xrs" secondAttribute="leading" constant="24" id="AEE-9E-UG0"/>
-                        <constraint firstItem="pGL-IR-230" firstAttribute="leading" secondItem="I4d-am-xrs" secondAttribute="leading" constant="315.5" id="C3q-4y-jSv"/>
                         <constraint firstItem="pGL-IR-230" firstAttribute="top" secondItem="yCV-CT-4vC" secondAttribute="bottom" constant="24" id="IUP-92-qLb"/>
                         <constraint firstAttribute="bottom" secondItem="pGL-IR-230" secondAttribute="bottom" constant="56" id="SIO-G0-kuS"/>
                         <constraint firstAttribute="trailing" secondItem="yCV-CT-4vC" secondAttribute="trailing" constant="24" id="URr-9X-mfh"/>

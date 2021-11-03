@@ -20,6 +20,8 @@ class IntroRouter {
 //            let router =
             let vc = LoginViewController(router: LoginRouter())
 //            vc.modalPresentationStyle = .fullScreen
+//            context.navigationController?.show(vc, sender: nil)
+//            context.show(vc, sender: nil)
             context.navigationController?.show(vc, sender: nil)
         }
     }
