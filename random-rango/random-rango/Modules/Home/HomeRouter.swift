@@ -26,9 +26,9 @@ class HomeRouter {
         case .signUp:
 //            let vm =
 //            let router =
-            let vc = SugestaoViewController()
+            let vc = RegisterViewController()
 //            vc.modalPresentationStyle = .fullScreen
-            context.navigationController?.show(vc, sender: nil)
+//            context.navigationController?.show(vc, sender: nil)
         case .forgotPass:
 //            let vm =
 //            let router =

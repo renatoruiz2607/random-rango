@@ -10,34 +10,47 @@ import RxSwift
 
 class FilterViewController: UIViewController {
 
-    @IBOutlet weak var companhiaSegment: UISegmentedControl!
+    @IBOutlet weak var quantidadePessoasSegment: UISegmentedControl!
+    @IBOutlet weak var refeicaoSegment: UISegmentedControl!
+    @IBOutlet weak var valorSegment: UISegmentedControl!
     @IBOutlet weak var estiloSegment: UISegmentedControl!
-    @IBOutlet weak var precoSegment: UISegmentedControl!
-    @IBOutlet weak var periodoSegment: UISegmentedControl!
     @IBOutlet weak var buscarButtonLayout: UIButton!
-    
     @IBOutlet weak var tituloLabel: UILabel!
+
+    let router: FilterRouter
+    let viewModel: FilterViewModel
     
-    let service: FilterService = .init()
+    enum Route: String {
+        case suggestion
+    }
+    
+    public init(router: FilterRouter, viewModel: FilterViewModel) {
+        self.router = router
+        self.viewModel = viewModel
+        super.init(nibName: "FilterViewController", bundle: Bundle(for: FilterViewController.self))
+    }
+    
+    required init?(coder: NSCoder) {
+        return nil
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLayer()
+        viewModel.delegate = self
+        setup()
     }
     
-    func setupLayer() {
-    view.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00)
-        
-        buttonConfig(buttonNeed: buscarButtonLayout)
+    func setup() {
+        view.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00)
+        buttonConfig(buttonNeeded: buscarButtonLayout)
         tituloLabel.textColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
-        segmentConfig(segmentNeed: companhiaSegment)
-        segmentConfig(segmentNeed: estiloSegment)
-        segmentConfig(segmentNeed: precoSegment)
-        segmentConfig(segmentNeed: periodoSegment)
-  
+        segmentConfig(segmentNeeded: quantidadePessoasSegment)
+        segmentConfig(segmentNeeded: estiloSegment)
+        segmentConfig(segmentNeeded: valorSegment)
+        segmentConfig(segmentNeeded: refeicaoSegment)
     }
     
-    public func buttonConfig(buttonNeed: UIButton){
+    public func buttonConfig(buttonNeeded: UIButton){
         buscarButtonLayout.layer.cornerRadius = 25.0
         buscarButtonLayout.layer.borderWidth = 1
         buscarButtonLayout.layer.borderColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00).cgColor
@@ -47,26 +60,24 @@ class FilterViewController: UIViewController {
         buscarButtonLayout.tintColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
     }
     
-    func segmentConfig(segmentNeed: UISegmentedControl){
-        segmentNeed.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.89, alpha: 1.00)
-        segmentNeed.selectedSegmentTintColor = UIColor(red: 0.89, green: 0.24, blue: 0.25, alpha: 0.80)
-        segmentNeed.tintColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
-        segmentNeed.layer.borderColor = CGColor(red: 0.93, green: 0.67, blue: 0.60, alpha: 1.00)
-        segmentNeed.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)], for: .normal)
-        segmentNeed.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)], for: .selected)
-        
+    func segmentConfig(segmentNeeded: UISegmentedControl){
+        segmentNeeded.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.89, alpha: 1.00)
+        segmentNeeded.selectedSegmentTintColor = UIColor(red: 0.89, green: 0.24, blue: 0.25, alpha: 0.80)
+        segmentNeeded.tintColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
+        segmentNeeded.layer.borderColor = CGColor(red: 0.93, green: 0.67, blue: 0.60, alpha: 1.00)
+        segmentNeeded.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)], for: .normal)
+        segmentNeeded.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)], for: .selected)
     }
     
     @IBAction func buscaButtonAction(_ sender: Any) {
-        service.getRestaurant() { model in
-            let filtered = model.filter{ resultado in
-                resultado.estilo.rawValue == 0
-            }
-            print(filtered.randomElement() as Any)
-        }
+        viewModel.filterAndRandomRestaurant(quantidadePessoas: quantidadePessoasSegment.selectedSegmentIndex, refeicao: refeicaoSegment.selectedSegmentIndex, valor: valorSegment.selectedSegmentIndex, estilo: estiloSegment.selectedSegmentIndex)
     }
 }
 
-
-
-
+extension FilterViewController: FilterViewModelDelegate {
+    func showRestaurantSuggestion(suggestion: FilterModel?) {
+        DispatchQueue.main.async { [self] in
+            self.router.route(to: Route.suggestion.rawValue, from: self, parameters: suggestion)
+        }
+    }
+}
