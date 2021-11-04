@@ -17,7 +17,20 @@ class ForgotPasswordViewController: UIViewController {
     @IBOutlet weak var ouLabel: UILabel!
     @IBOutlet weak var criarNovaContaButton: UIButton!
     
+    let router: ForgotPassRouter
     
+    enum Route: String {
+        case register
+    }
+    
+    public init(router: ForgotPassRouter) {
+        self.router = router
+        super.init(nibName: "ForgotPasswordViewController", bundle: Bundle(for: ForgotPasswordViewController.self))
+    }
+    
+    required init?(coder: NSCoder) {
+        return nil
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,19 +58,10 @@ class ForgotPasswordViewController: UIViewController {
         fraseLabel.textColor = UIColor(red: 0.90, green: 0.34, blue: 0.34, alpha: 1.00)
         
         ouLabel.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00)
-        
     }
     
-    func setup(title: String, hasBackground: Bool) {
-        enviarLinkButton.setTitle(title, for: .normal)
-        
-        if hasBackground {
-            enviarLinkButton.backgroundColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
-            enviarLinkButton.layer.cornerRadius = 25.0
-            
-            
-        }
-        
-        
+    @IBAction func criarNovaContaButtonAction(_ sender: Any) {
+        self.router.route(to: Route.register.rawValue, from: self, parameters: nil)
     }
+    
 }

@@ -17,6 +17,7 @@
 		0390A075272EE2E100FB1B2F /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390A074272EE2E100FB1B2F /* FilterViewModel.swift */; };
 		0390A0782731705600FB1B2F /* SugestaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390A0762731705600FB1B2F /* SugestaoViewController.swift */; };
 		0390A0792731705600FB1B2F /* SugestaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0390A0772731705600FB1B2F /* SugestaoViewController.xib */; };
+		5F11E58527336C1F00320EF5 /* ForgotPassRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F11E58427336C1F00320EF5 /* ForgotPassRouter.swift */; };
 		5F64409F2731E0960096B597 /* FilterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F64409E2731E0960096B597 /* FilterRouter.swift */; };
 		5F683B9D27288126008E35AF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F683B9C27288126008E35AF /* LoginRouter.swift */; };
 		5F70D8F2271DE3CB002128A3 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F70D8F1271DE3CB002128A3 /* HomeRouter.swift */; };
@@ -86,6 +87,7 @@
 		0390A0772731705600FB1B2F /* SugestaoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SugestaoViewController.xib; sourceTree = "<group>"; };
 		1FFDAC11D759135ADF8F6FE5 /* Pods-random-rangoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rangoTests.release.xcconfig"; path = "Target Support Files/Pods-random-rangoTests/Pods-random-rangoTests.release.xcconfig"; sourceTree = "<group>"; };
 		2AFEF16147A4E4795FDB91A7 /* Pods_random_rangoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_random_rangoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F11E58427336C1F00320EF5 /* ForgotPassRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassRouter.swift; sourceTree = "<group>"; };
 		5F64409E2731E0960096B597 /* FilterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRouter.swift; sourceTree = "<group>"; };
 		5F683B9C27288126008E35AF /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		5F70D8F1271DE3CB002128A3 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				030D4D082723A21D007753D1 /* ForgotPasswordViewController.swift */,
 				030D4D092723A21D007753D1 /* ForgotPasswordViewController.xib */,
+				5F11E58427336C1F00320EF5 /* ForgotPassRouter.swift */,
 			);
 			path = ForgotPass;
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 				5FC52331271D066700DC2B7A /* HomeViewController.swift in Sources */,
 				64F2F33527221F3400030EF7 /* HistoricViewController.swift in Sources */,
 				64F2F3382722232E00030EF7 /* HistoricView.swift in Sources */,
+				5F11E58527336C1F00320EF5 /* ForgotPassRouter.swift in Sources */,
 				0390A0782731705600FB1B2F /* SugestaoViewController.swift in Sources */,
 				5F64409F2731E0960096B597 /* FilterRouter.swift in Sources */,
 				5FC5233B271DCE7C00DC2B7A /* ButtonCell.swift in Sources */,
