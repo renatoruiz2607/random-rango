@@ -18,7 +18,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var forgotPassButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var sugestionButton: UIButton!
     @IBOutlet weak var historicButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContentView: UIView!
@@ -57,7 +56,6 @@ class LoginViewController: UIViewController {
         socialMediaSecondImage.image = UIImage(named: "facebookLogo")
         forgotPassButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
         signUpButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
-        sugestionButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
         historicButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
         
         loginButton.tintColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
@@ -90,10 +88,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func signUpButtonAction(_ sender: Any) {
         self.router.route(to: Route.signUp.rawValue, from: self, parameters: nil)
-    }
-    
-    @IBAction func sugestionButtonAction(_ sender: Any) {
-        self.router.route(to: Route.sugestion.rawValue, from: self, parameters: nil)
     }
     
     @IBAction func historicButtonAction(_ sender: Any) {

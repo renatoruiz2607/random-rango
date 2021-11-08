@@ -37,7 +37,8 @@ class SugestaoViewController: UIViewController {
         labelsConfig(labelNeed: restauranteTituloLabel)
         labelsConfig(labelNeed: restauranteDescricaoLabel)
         
-        restauranteImagemImageView.layer.cornerRadius = 126.5
+        restauranteImagemImageView.image = UIImage(named: "Restaurante logo")
+        restauranteImagemImageView.layer.cornerRadius = restauranteImagemImageView.bounds.width / 2.1
         restauranteImagemImageView.layer.borderWidth = 1
         restauranteImagemImageView.layer.borderColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00).cgColor
         restauranteImagemImageView.clipsToBounds = true

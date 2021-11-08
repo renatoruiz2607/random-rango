@@ -32,7 +32,7 @@ class LoginRouter {
         case .forgotPass:
 //            let vm =
 //            let router =
-            let vc = ForgotPasswordViewController()
+            let vc = ForgotPasswordViewController(router: ForgotPassRouter())
 //            vc.modalPresentationStyle = .fullScreen
             context.navigationController?.show(vc, sender: nil)
         case .sugestion:
