@@ -16,10 +16,9 @@ class FilterViewModel {
     var delegate: FilterViewModelDelegate?
     let service: FilterService = .init()
     
-
     public func filterAndRandomRestaurant(quantidadePessoas: Int, refeicao: Int, valor: Int, estilo: Int) {
         service.getRestaurant() { restaurants in
-            
+
             let filteredArray = restaurants.filter { restaurant in
                 restaurant.quantidadePessoas.rawValue == quantidadePessoas && restaurant.refeicao.rawValue == refeicao &&
                 restaurant.valor.rawValue == valor &&

@@ -20,7 +20,6 @@ class FilterRouter {
                 assertionFailure("Parameter type cast fail!")
                 return
             }
-//            let vc = SugestionViewController()
             let vc = SugestaoViewController(suggestion: suggestion)
             context.navigationController?.show(vc, sender: nil)
         }
