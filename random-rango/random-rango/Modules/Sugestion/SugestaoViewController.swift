@@ -14,10 +14,14 @@ class SugestaoViewController: UIViewController {
     @IBOutlet weak var restauranteDescricaoLabel: UILabel!
     @IBOutlet weak var atualizarButtonLayout: UIButton!
     
+    var restaurantImage = UIImageView()
+    
     var suggestion: FilterModel?
+    let viewModel: SugestaoViewModel
 
-    init(suggestion: FilterModel?) {
+    init(suggestion: FilterModel?, viewModel: SugestaoViewModel) {
         self.suggestion = suggestion
+        self.viewModel = viewModel
         super.init(nibName: "SugestaoViewController", bundle: Bundle(for: SugestaoViewController.self))
     }
     
@@ -63,6 +67,7 @@ class SugestaoViewController: UIViewController {
     func loadSuggestionData() {
         restauranteTituloLabel.text = suggestion?.nome
         restauranteDescricaoLabel.text = suggestion?.texto
+        restauranteImagemImageView = viewModel.downloadFromUrl(image: suggestion?.image ?? "", imageView: restauranteImagemImageView)
     }
     
 }
