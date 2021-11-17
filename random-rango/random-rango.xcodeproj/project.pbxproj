@@ -44,6 +44,11 @@
 		5FEFDD4F27261B4C00FD7915 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FEFDD4D27261B4C00FD7915 /* LoginViewController.xib */; };
 		6480E9A6272776BE008C230A /* Historic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6480E9A5272776BE008C230A /* Historic.swift */; };
 		6480E9A8272786DA008C230A /* HistoricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6480E9A7272786DA008C230A /* HistoricCell.swift */; };
+		64AB584527459B7F00438B16 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AB584427459B7F00438B16 /* CoreDataService.swift */; };
+		64AB584827459C2400438B16 /* Restaurant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64AB584627459C2400438B16 /* Restaurant.xcdatamodeld */; };
+		64AB58522745A94C00438B16 /* Restaurant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AB58512745A94C00438B16 /* Restaurant+CoreDataProperties.swift */; };
+		64AB58542745A94F00438B16 /* Restaurant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AB58532745A94F00438B16 /* Restaurant+CoreDataClass.swift */; };
+		64AB58562745ACB400438B16 /* HistoricViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AB58552745ACB400438B16 /* HistoricViewModel.swift */; };
 		64F2F33527221F3400030EF7 /* HistoricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F2F33427221F3400030EF7 /* HistoricViewController.swift */; };
 		64F2F3382722232E00030EF7 /* HistoricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F2F3372722232E00030EF7 /* HistoricView.swift */; };
 		64F2F33A2722490300030EF7 /* RangoCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F2F3392722490300030EF7 /* RangoCustomCell.swift */; };
@@ -118,6 +123,11 @@
 		5FEFDD4D27261B4C00FD7915 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		6480E9A5272776BE008C230A /* Historic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Historic.swift; sourceTree = "<group>"; };
 		6480E9A7272786DA008C230A /* HistoricCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricCell.swift; sourceTree = "<group>"; };
+		64AB584427459B7F00438B16 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		64AB584727459C2400438B16 /* Restaurant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Restaurant.xcdatamodel; sourceTree = "<group>"; };
+		64AB58512745A94C00438B16 /* Restaurant+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Restaurant+CoreDataProperties.swift"; path = "/Users/williamzabot/Documents/iosprojects/random-rango/random-rango/random-rango/Modules/Historic/Model/Restaurant+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		64AB58532745A94F00438B16 /* Restaurant+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Restaurant+CoreDataClass.swift"; path = "/Users/williamzabot/Documents/iosprojects/random-rango/random-rango/random-rango/Modules/Historic/Model/Restaurant+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		64AB58552745ACB400438B16 /* HistoricViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewModel.swift; sourceTree = "<group>"; };
 		64F2F33427221F3400030EF7 /* HistoricViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewController.swift; sourceTree = "<group>"; };
 		64F2F3372722232E00030EF7 /* HistoricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricView.swift; sourceTree = "<group>"; };
 		64F2F3392722490300030EF7 /* RangoCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangoCustomCell.swift; sourceTree = "<group>"; };
@@ -264,6 +274,7 @@
 				5F90EE6727207555005EFE17 /* Intro */,
 				5F70D8F3271DED12002128A3 /* RouterTest */,
 				5FC52333271DC6F900DC2B7A /* Home */,
+				64AB584427459B7F00438B16 /* CoreDataService.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -313,6 +324,9 @@
 			isa = PBXGroup;
 			children = (
 				6480E9A5272776BE008C230A /* Historic.swift */,
+				64AB58532745A94F00438B16 /* Restaurant+CoreDataClass.swift */,
+				64AB58512745A94C00438B16 /* Restaurant+CoreDataProperties.swift */,
+				64AB584627459C2400438B16 /* Restaurant.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -324,6 +338,7 @@
 				64F2F3362722203A00030EF7 /* View */,
 				64F2F33427221F3400030EF7 /* HistoricViewController.swift */,
 				6480E9A7272786DA008C230A /* HistoricCell.swift */,
+				64AB58552745ACB400438B16 /* HistoricViewModel.swift */,
 			);
 			path = Historic;
 			sourceTree = "<group>";
@@ -633,13 +648,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64AB58522745A94C00438B16 /* Restaurant+CoreDataProperties.swift in Sources */,
 				6692A9FB2721F5D500C5E899 /* FilterViewController.swift in Sources */,
 				0390A073272EDD5A00FB1B2F /* FilterService.swift in Sources */,
+				64AB584827459C2400438B16 /* Restaurant.xcdatamodeld in Sources */,
 				5F90EE6A2720756C005EFE17 /* IntroViewController.swift in Sources */,
 				030D4CF42720E573007753D1 /* RegisterViewController.swift in Sources */,
+				64AB58542745A94F00438B16 /* Restaurant+CoreDataClass.swift in Sources */,
 				0390A070272EDCAC00FB1B2F /* FilterModel.swift in Sources */,
 				5FC52340271DD27700DC2B7A /* HomeSectionModel.swift in Sources */,
 				5F70D8F6271DED31002128A3 /* RouterTestViewController.swift in Sources */,
+				64AB58562745ACB400438B16 /* HistoricViewModel.swift in Sources */,
 				5F683B9D27288126008E35AF /* LoginRouter.swift in Sources */,
 				5F90EE6D27207587005EFE17 /* IntroRouter.swift in Sources */,
 				5FC522FF271CFBD100DC2B7A /* AppDelegate.swift in Sources */,
@@ -653,6 +672,7 @@
 				5FC52301271CFBD100DC2B7A /* SceneDelegate.swift in Sources */,
 				030D4D0A2723A21D007753D1 /* ForgotPasswordViewController.swift in Sources */,
 				5FC52331271D066700DC2B7A /* HomeViewController.swift in Sources */,
+				64AB584527459B7F00438B16 /* CoreDataService.swift in Sources */,
 				64F2F33527221F3400030EF7 /* HistoricViewController.swift in Sources */,
 				64F2F3382722232E00030EF7 /* HistoricView.swift in Sources */,
 				5F11E58527336C1F00320EF5 /* ForgotPassRouter.swift in Sources */,
@@ -1022,6 +1042,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		64AB584627459C2400438B16 /* Restaurant.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				64AB584727459C2400438B16 /* Restaurant.xcdatamodel */,
+			);
+			currentVersion = 64AB584727459C2400438B16 /* Restaurant.xcdatamodel */;
+			path = Restaurant.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5FC522F3271CFBD100DC2B7A /* Project object */;
 }

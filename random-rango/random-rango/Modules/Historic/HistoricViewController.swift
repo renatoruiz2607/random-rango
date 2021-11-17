@@ -9,13 +9,10 @@ import Foundation
 import UIKit
 
 
-class HistoricViewController : UIViewController{
+class HistoricViewController : UIViewController {
     
-    let historics : [Historic] = [
-        .init(title: "Restaurante tal", address: "Av. bento gonçalves", stars: 4),
-        .init(title: "Teste", address: "Teste2", stars: 5),
-        .init(title: "Test3", address: "teste3", stars: 1)
-    ]
+    var historics : [Restaurant] = []
+    let historicViewModel = HistoricViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +22,8 @@ class HistoricViewController : UIViewController{
         historicView.historicTableView.dataSource = self
         historicView.historicTableView.delegate = self
         historicView.historicTableView.register(HistoricCell.self, forCellReuseIdentifier: "historicCell")
+        
+        historics = historicViewModel.getRestaurants()
     }
 }
 

@@ -22,7 +22,10 @@ class RangoCustomCell : UIView {
     private lazy var address : UILabel = {
         let label = UILabel()
         label.textColor = red
+        label.minimumScaleFactor = 0.5
+        label.adjustsFontSizeToFitWidth = true
         label.textAlignment = .left
+        label.numberOfLines = 0
         return label
     }()
     
@@ -57,18 +60,20 @@ class RangoCustomCell : UIView {
         address.translatesAutoresizingMaskIntoConstraints = false
         address.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 8).isActive = true
         address.leadingAnchor.constraint(equalTo: title.leadingAnchor, constant: 0).isActive = true
+        address.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8).isActive = true
         
         stars.translatesAutoresizingMaskIntoConstraints = false
         stars.heightAnchor.constraint(equalToConstant: 20).isActive = true
         stars.widthAnchor.constraint(equalToConstant: 80).isActive = true
         stars.topAnchor.constraint(equalTo: address.bottomAnchor, constant: 10).isActive = true
         stars.leadingAnchor.constraint(equalTo: address.leadingAnchor, constant: 0).isActive = true
+        stars.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
     }
     
-    func setHistoric(historic : Historic){
-        title.text = historic.title
-        address.text = historic.address
-        setStars(num: historic.stars)
+    func setHistoric(historic : Restaurant){
+        title.text = historic.name
+        address.text = historic.text
+        setStars(num: 4)
     }
     
     private func setStars(num : Int){
