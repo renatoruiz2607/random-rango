@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class SugestaoViewController: UIViewController {
     
@@ -13,6 +15,8 @@ class SugestaoViewController: UIViewController {
     @IBOutlet weak var restauranteTituloLabel: UILabel!
     @IBOutlet weak var restauranteDescricaoLabel: UILabel!
     @IBOutlet weak var atualizarButtonLayout: UIButton!
+    
+    private let disposeBag = DisposeBag()
     
     var restaurantImage = UIImageView()
     
@@ -32,6 +36,7 @@ class SugestaoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupBindings()
         loadSuggestionData()
     }
     
@@ -41,12 +46,24 @@ class SugestaoViewController: UIViewController {
         labelsConfig(labelNeed: restauranteTituloLabel)
         labelsConfig(labelNeed: restauranteDescricaoLabel)
         
-        restauranteImagemImageView.image = UIImage(named: "Restaurante logo")
-        restauranteImagemImageView.layer.cornerRadius = restauranteImagemImageView.bounds.width / 2.1
+        setupLogo(logo: UIImage(named: "Restaurante logo"))
+    }
+    
+    func setupBindings() {
+        viewModel.imageView
+            .asObservable()
+            .subscribe(onNext: { imageView in
+                self.setupLogo(logo: imageView)
+            }).disposed(by: disposeBag)
+    }
+    
+    func setupLogo(logo: UIImage?) {
+        restauranteImagemImageView.image = logo
         restauranteImagemImageView.layer.borderWidth = 1
         restauranteImagemImageView.layer.borderColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00).cgColor
-        restauranteImagemImageView.clipsToBounds = true
         restauranteImagemImageView.layer.borderColor = UIColor.clear.cgColor
+        restauranteImagemImageView.layoutIfNeeded()
+        restauranteImagemImageView.layer.cornerRadius = restauranteImagemImageView.bounds.width / 2.1
     }
     
     public func buttonConfig(buttonNeed: UIButton){
@@ -67,7 +84,9 @@ class SugestaoViewController: UIViewController {
     func loadSuggestionData() {
         restauranteTituloLabel.text = suggestion?.nome
         restauranteDescricaoLabel.text = suggestion?.texto
-        restauranteImagemImageView = viewModel.downloadFromUrl(image: suggestion?.image ?? "", imageView: restauranteImagemImageView)
+
+        viewModel.downloadFromUrl(image: suggestion?.image ?? "")
+        
     }
     
 }
