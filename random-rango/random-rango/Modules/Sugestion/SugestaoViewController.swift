@@ -63,7 +63,7 @@ class SugestaoViewController: UIViewController {
         restauranteImagemImageView.layer.borderColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00).cgColor
         restauranteImagemImageView.layer.borderColor = UIColor.clear.cgColor
         restauranteImagemImageView.layoutIfNeeded()
-        restauranteImagemImageView.layer.cornerRadius = restauranteImagemImageView.bounds.width / 2.1
+        restauranteImagemImageView.layer.cornerRadius = restauranteImagemImageView.bounds.width / 2
     }
     
     public func buttonConfig(buttonNeed: UIButton){
