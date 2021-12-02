@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var separatorLabel: UILabel!
+    @IBOutlet weak var googleButton: GIDSignInButton!
     @IBOutlet weak var socialMediaFirstImage: UIImageView!
     @IBOutlet weak var socialMediaSecondImage: UIImageView!
     @IBOutlet weak var emailTextField: UITextField!
@@ -43,6 +46,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        GIDSignIn.sharedInstance().presentingViewController = self
+        GIDSignIn.sharedInstance().delegate = self
         setupUI()
     }
     
@@ -53,6 +58,9 @@ class LoginViewController: UIViewController {
         separatorLabel.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00)
         logoImage.image = UIImage(named: "appLogo")
         socialMediaFirstImage.image = UIImage(named: "googleLogoG")
+        
+        socialMediaFirstImage.isHidden = true
+        
         socialMediaSecondImage.image = UIImage(named: "facebookLogo")
         forgotPassButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
         signUpButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
@@ -94,4 +102,25 @@ class LoginViewController: UIViewController {
         self.router.route(to: Route.historic.rawValue, from: self, parameters: nil)
     }
     
+}
+
+extension LoginViewController: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        print("E-mail do usuário: \(String(describing: user.profile.email)), \nNome do usuário: \(String(describing: user.profile.name))")
+        
+        guard
+            let authentication = user.authentication,
+            let idToken = authentication.idToken
+        else { return }
+        
+        let credential = GoogleAuthProvider.credential(
+            withIDToken: idToken,
+            accessToken: authentication.accessToken
+        )
+        
+        Auth.auth().signIn(with: credential) { authResult, error in
+            if let error = error { return }
+            print("Usuário logado ao Firebase")
+        }
+    }
 }
