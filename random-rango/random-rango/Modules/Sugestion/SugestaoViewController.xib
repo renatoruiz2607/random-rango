@@ -37,19 +37,23 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo Restaurante" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZX-jV-VsL">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Titulo Restaurante" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZX-jV-VsL">
                     <rect key="frame" x="24" y="626.5" width="366" height="31.5"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="pointerCropped" highlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Apz-Je-9FZ">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pointerCropped" highlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Apz-Je-9FZ">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="623.5"/>
                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k2V-w7-5fk">
-                    <rect key="frame" x="46" y="150.5" width="322" height="322.5"/>
+                    <rect key="frame" x="46" y="151" width="322" height="322"/>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="322" id="5Bk-lY-fc6"/>
+                        <constraint firstAttribute="height" constant="322" id="722-Zl-Dw3"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -59,11 +63,9 @@
                 <constraint firstItem="9ZX-jV-VsL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="FHj-4g-TD4"/>
                 <constraint firstItem="9ZX-jV-VsL" firstAttribute="top" secondItem="Apz-Je-9FZ" secondAttribute="bottom" constant="3" id="LBS-vL-zVe"/>
                 <constraint firstItem="Apz-Je-9FZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MvS-Iy-tUr"/>
-                <constraint firstItem="k2V-w7-5fk" firstAttribute="width" secondItem="Apz-Je-9FZ" secondAttribute="height" multiplier="260:503" id="PMY-rG-TXF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9ZX-jV-VsL" secondAttribute="trailing" constant="24" id="UD8-SX-xio"/>
                 <constraint firstItem="k2V-w7-5fk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="V7f-XF-zoQ"/>
                 <constraint firstItem="k2V-w7-5fk" firstAttribute="centerY" secondItem="Apz-Je-9FZ" secondAttribute="centerY" id="V9Y-fN-5Z6"/>
-                <constraint firstItem="k2V-w7-5fk" firstAttribute="height" secondItem="Apz-Je-9FZ" secondAttribute="height" multiplier="0.516899" id="WK3-Rz-Zwe"/>
                 <constraint firstItem="paT-nh-X2u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="74" id="Zls-iS-h2W"/>
                 <constraint firstItem="8p4-gc-i58" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="Zna-XP-2ya"/>
                 <constraint firstItem="Apz-Je-9FZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cCv-eU-B7s"/>
