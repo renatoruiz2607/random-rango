@@ -54,9 +54,24 @@ class LoginViewController: UIViewController {
         GIDSignIn.sharedInstance().delegate = self
         
         let loginButton = FBLoginButton(frame: .zero, permissions: [.publicProfile])
+        loginButton.delegate = self
         self.facebookButton.addSubview(loginButton)
         
         setupUI()
+    }
+    
+    func loginFacebookNoFirebase(accessToken: String) {
+        
+        let credential = FacebookAuthProvider.credential(withAccessToken: accessToken)
+        
+        Auth.auth().signIn(with: credential) { result, error in
+            if let error = error {
+                print ("Erro ao logar no firebase")
+            }
+            print("Usuário efetuou login no Firebase")
+//            if let user = Auth.auth().currentUser {}
+        }
+        
     }
     
     func setupUI() {
@@ -136,7 +151,14 @@ extension LoginViewController: GIDSignInDelegate {
 
 extension LoginViewController: LoginButtonDelegate {
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-        print("Usuário loogu com Facebok")
+        switch result {
+        case .none:
+            print("Ocorreu um erro")
+        case .some(let loginResult):
+            if let token = loginResult.token?.tokenString {
+                loginFacebookNoFirebase(accessToken: token)
+            }
+        }
     }
     
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
