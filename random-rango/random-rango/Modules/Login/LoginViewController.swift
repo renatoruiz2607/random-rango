@@ -145,6 +145,7 @@ extension LoginViewController: GIDSignInDelegate {
         Auth.auth().signIn(with: credential) { authResult, error in
             if let error = error { return }
             print("Usuário logado ao Firebase")
+            self.router.route(to: Route.login.rawValue, from: self, parameters: nil)
         }
     }
 }
@@ -157,6 +158,7 @@ extension LoginViewController: LoginButtonDelegate {
         case .some(let loginResult):
             if let token = loginResult.token?.tokenString {
                 loginFacebookNoFirebase(accessToken: token)
+                self.router.route(to: Route.login.rawValue, from: self, parameters: nil)
             }
         }
     }
