@@ -11,6 +11,8 @@ target 'random-rango' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn', '~> 5.0'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
 
   target 'random-rangoTests' do
     inherit! :search_paths
