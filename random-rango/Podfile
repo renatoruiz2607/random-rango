@@ -8,6 +8,9 @@ target 'random-rango' do
   # Pods for random-rango
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn', '~> 5.0'
 
   target 'random-rangoTests' do
     inherit! :search_paths

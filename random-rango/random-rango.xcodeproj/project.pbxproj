@@ -18,6 +18,7 @@
 		0390A0782731705600FB1B2F /* SugestaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390A0762731705600FB1B2F /* SugestaoViewController.swift */; };
 		0390A0792731705600FB1B2F /* SugestaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0390A0772731705600FB1B2F /* SugestaoViewController.xib */; };
 		5F11E58527336C1F00320EF5 /* ForgotPassRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F11E58427336C1F00320EF5 /* ForgotPassRouter.swift */; };
+		5F32B5652759351C00DE7C48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F32B5642759351C00DE7C48 /* GoogleService-Info.plist */; };
 		5F64409F2731E0960096B597 /* FilterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F64409E2731E0960096B597 /* FilterRouter.swift */; };
 		5F683B9D27288126008E35AF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F683B9C27288126008E35AF /* LoginRouter.swift */; };
 		5F70D8F2271DE3CB002128A3 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F70D8F1271DE3CB002128A3 /* HomeRouter.swift */; };
@@ -95,6 +96,7 @@
 		1FFDAC11D759135ADF8F6FE5 /* Pods-random-rangoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rangoTests.release.xcconfig"; path = "Target Support Files/Pods-random-rangoTests/Pods-random-rangoTests.release.xcconfig"; sourceTree = "<group>"; };
 		2AFEF16147A4E4795FDB91A7 /* Pods_random_rangoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_random_rangoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F11E58427336C1F00320EF5 /* ForgotPassRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassRouter.swift; sourceTree = "<group>"; };
+		5F32B5642759351C00DE7C48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5F64409E2731E0960096B597 /* FilterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRouter.swift; sourceTree = "<group>"; };
 		5F683B9C27288126008E35AF /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		5F70D8F1271DE3CB002128A3 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				5FC52307271CFBD200DC2B7A /* Assets.xcassets */,
 				5FC52309271CFBD200DC2B7A /* LaunchScreen.storyboard */,
 				5FC5230C271CFBD200DC2B7A /* Info.plist */,
+				5F32B5642759351C00DE7C48 /* GoogleService-Info.plist */,
 			);
 			path = "random-rango";
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				5FC522F8271CFBD100DC2B7A /* Frameworks */,
 				5FC522F9271CFBD100DC2B7A /* Resources */,
 				DD2413B1E7F4C93D55955C09 /* [CP] Embed Pods Frameworks */,
+				AEBCED901AD1953C062236B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -455,6 +459,7 @@
 				5FC52318271CFBD300DC2B7A /* Frameworks */,
 				5FC52319271CFBD300DC2B7A /* Resources */,
 				92AC12741A49580C201956BE /* [CP] Embed Pods Frameworks */,
+				3F1BA24BF28C7F17FF1FCFE0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -527,6 +532,7 @@
 				030D4CF52720E573007753D1 /* RegisterViewController.xib in Resources */,
 				DCCEB9192720F1D800B70846 /* SugestionViewController.xib in Resources */,
 				0390A0792731705600FB1B2F /* SugestaoViewController.xib in Resources */,
+				5F32B5652759351C00DE7C48 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +575,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3F1BA24BF28C7F17FF1FCFE0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-random-rango-random-rangoUITests/Pods-random-rango-random-rangoUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-random-rango-random-rangoUITests/Pods-random-rango-random-rangoUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-random-rango-random-rangoUITests/Pods-random-rango-random-rangoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		59CC00B6B0E870F48CAA1374 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -606,6 +629,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-random-rango-random-rangoUITests/Pods-random-rango-random-rangoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEBCED901AD1953C062236B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-random-rango/Pods-random-rango-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-random-rango/Pods-random-rango-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-random-rango/Pods-random-rango-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DD2413B1E7F4C93D55955C09 /* [CP] Embed Pods Frameworks */ = {
