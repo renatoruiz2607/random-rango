@@ -9,22 +9,35 @@ import UIKit
 import CoreData
 import Firebase
 import GoogleSignIn
+import FacebookCore
+import FBSDKLoginKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         FirebaseApp.configure()
         
+//        GIDSignIn.sharedInstance().clientID = "400098802293-9lds6ojieg5fsuhg4bqr9pekij857cg1.apps.googleusercontent.com"
+//
+//        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+
         GIDSignIn.sharedInstance().clientID = "400098802293-9lds6ojieg5fsuhg4bqr9pekij857cg1.apps.googleusercontent.com"
         
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url)
+//        let googleDidHandle = GIDSignIn.sharedInstance().handle(url)
+//        let facebookDidHandle = ApplicationDelegate.shared.application(app, open: url, options: options)
+//        return googleDidHandle || facebookDidHandle
+        
+        return ApplicationDelegate.shared.application(app, open: url, options: options)
+                    || GIDSignIn.sharedInstance().handle(url)
+        
     }
 
     // MARK: UISceneSession Lifecycle
