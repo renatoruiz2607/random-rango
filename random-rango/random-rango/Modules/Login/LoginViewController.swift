@@ -148,7 +148,9 @@ extension LoginViewController: LoginButtonDelegate {
         viewModel.authAndSignInFacebook(result: result)
     }
     
-    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {}
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        socialMediaFirstImage.image = UIImage(named: "facebookLogo")
+    }
 }
 
 extension LoginViewController: LoginViewModelDelegate {
@@ -158,5 +160,6 @@ extension LoginViewController: LoginViewModelDelegate {
     
     func facebookAuthorized() {
         self.router.route(to: Route.login.rawValue, from: self, parameters: nil)
+        socialMediaFirstImage.image = UIImage(named: "logoutFacebookLogo")
     }
 }
