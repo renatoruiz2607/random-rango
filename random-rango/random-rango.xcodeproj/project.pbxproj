@@ -24,6 +24,7 @@
 		5F70D8F2271DE3CB002128A3 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F70D8F1271DE3CB002128A3 /* HomeRouter.swift */; };
 		5F70D8F6271DED31002128A3 /* RouterTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F70D8F4271DED31002128A3 /* RouterTestViewController.swift */; };
 		5F70D8F7271DED31002128A3 /* RouterTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F70D8F5271DED31002128A3 /* RouterTestViewController.xib */; };
+		5F81187F275F9063006E377F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F81187E275F9063006E377F /* LoginViewModel.swift */; };
 		5F87E15A27473F1A00591BA8 /* Restaurant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87E15627473F1A00591BA8 /* Restaurant+CoreDataClass.swift */; };
 		5F87E15B27473F1A00591BA8 /* Restaurant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87E15727473F1A00591BA8 /* Restaurant+CoreDataProperties.swift */; };
 		5F87E15C27473F1A00591BA8 /* Restaurant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F87E15827473F1A00591BA8 /* Restaurant.xcdatamodeld */; };
@@ -102,6 +103,7 @@
 		5F70D8F1271DE3CB002128A3 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		5F70D8F4271DED31002128A3 /* RouterTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTestViewController.swift; sourceTree = "<group>"; };
 		5F70D8F5271DED31002128A3 /* RouterTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouterTestViewController.xib; sourceTree = "<group>"; };
+		5F81187E275F9063006E377F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5F87E15627473F1A00591BA8 /* Restaurant+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Restaurant+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5F87E15727473F1A00591BA8 /* Restaurant+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Restaurant+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5F87E15927473F1A00591BA8 /* Restaurant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Restaurant.xcdatamodel; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				5FEFDD4C27261B4C00FD7915 /* LoginViewController.swift */,
 				5FEFDD4D27261B4C00FD7915 /* LoginViewController.xib */,
 				5F683B9C27288126008E35AF /* LoginRouter.swift */,
+				5F81187E275F9063006E377F /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -702,6 +705,7 @@
 				5FE2E03C27430AE000445A83 /* SugestaoViewModel.swift in Sources */,
 				5FC52340271DD27700DC2B7A /* HomeSectionModel.swift in Sources */,
 				5F70D8F6271DED31002128A3 /* RouterTestViewController.swift in Sources */,
+				5F81187F275F9063006E377F /* LoginViewModel.swift in Sources */,
 				64AB58562745ACB400438B16 /* HistoricViewModel.swift in Sources */,
 				5F683B9D27288126008E35AF /* LoginRouter.swift in Sources */,
 				5FE2E03A27430A8E00445A83 /* SugestaoService.swift in Sources */,
