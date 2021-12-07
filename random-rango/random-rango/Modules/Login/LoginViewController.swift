@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var separatorLabel: UILabel!
-    @IBOutlet weak var googleButton: GIDSignInButton!
+//    @IBOutlet weak var googleButton: GIDSignInButton!
     @IBOutlet weak var facebookButton: UIView!
     @IBOutlet weak var socialMediaFirstImage: UIImageView!
     @IBOutlet weak var socialMediaSecondImage: UIImageView!
@@ -27,6 +27,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var historicButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContentView: UIView!
+    
+    let facebookLoginButton = FBLoginButton(frame: .zero, permissions: [.publicProfile])
     
     let router: LoginRouter
     
@@ -52,12 +54,16 @@ class LoginViewController: UIViewController {
         
         GIDSignIn.sharedInstance().presentingViewController = self
         GIDSignIn.sharedInstance().delegate = self
+//        googleButton.isHidden = true
         
-        let loginButton = FBLoginButton(frame: .zero, permissions: [.publicProfile])
-        loginButton.delegate = self
-        self.facebookButton.addSubview(loginButton)
+//        let loginButton = FBLoginButton(frame: .zero, permissions: [.publicProfile])
+        facebookLoginButton.delegate = self
+        facebookLoginButton.isHidden = true
+//        self.facebookButton.addSubview(loginButton)
         
         setupUI()
+        facebookTap()
+        googleTap()
     }
     
     func loginFacebookNoFirebase(accessToken: String) {
@@ -80,12 +86,12 @@ class LoginViewController: UIViewController {
         scrollContentView.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00)
         separatorLabel.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00)
         logoImage.image = UIImage(named: "appLogo")
-        socialMediaFirstImage.image = UIImage(named: "googleLogoG")
+        socialMediaSecondImage.image = UIImage(named: "googleLogoG")
         
-        socialMediaFirstImage.isHidden = true
-        socialMediaSecondImage.isHidden = true
+//        socialMediaFirstImage.isHidden = true
+//        socialMediaSecondImage.isHidden = true
         
-        socialMediaSecondImage.image = UIImage(named: "facebookLogo")
+        socialMediaFirstImage.image = UIImage(named: "facebookLogo")
         forgotPassButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
         signUpButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
         historicButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
@@ -109,6 +115,27 @@ class LoginViewController: UIViewController {
         textFieldNeeded.layer.borderColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00).cgColor
         textFieldNeeded.clipsToBounds = true
     }
+    
+    func googleTap() {
+        let googleTap = UITapGestureRecognizer(target: self, action: #selector(googleTapWasPressed))
+        socialMediaSecondImage.isUserInteractionEnabled = true
+        socialMediaSecondImage.addGestureRecognizer(googleTap)
+    }
+
+    @objc func googleTapWasPressed() {
+        GIDSignIn.sharedInstance().signIn()
+    }
+    
+    func facebookTap() {
+        let facebookTap = UITapGestureRecognizer(target: self, action: #selector(facebookTapWasPressed))
+        socialMediaFirstImage.isUserInteractionEnabled = true
+        socialMediaFirstImage.addGestureRecognizer(facebookTap)
+    }
+
+    @objc func facebookTapWasPressed() {
+        facebookLoginButton.sendActions(for: .touchUpInside)
+    }
+
     
     @IBAction func forgotPassButtonAction(_ sender: Any) {
         self.router.route(to: Route.forgotPass.rawValue, from: self, parameters: nil)
