@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Firebase
+import FirebaseAuth
 import GoogleSignIn
 import FacebookCore
 import FacebookLogin
@@ -15,6 +16,8 @@ import FacebookLogin
 protocol LoginViewModelDelegate {
     func googleAuthorized()
     func facebookAuthorized()
+    func emailPassAuthorized()
+    func showAlert(alert: UIAlertController)
 }
 
 class LoginViewModel {
@@ -60,8 +63,54 @@ class LoginViewModel {
                 print ("Erro ao logar no firebase")
             }
             print("Usuário efetuou login no Firebase")
-//            if let user = Auth.auth().currentUser {}
         }
+    }
+    
+    func loginWithEmailAndPass(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
+            guard let self = self else { return }
+            
+            guard error == nil else {
+                print(error)
+                self.createFirebaseAccount(email: email, password: password)
+                return
+            }
+            print("<<<<<O usuário fez login com sucesso!")
+            self.delegate?.emailPassAuthorized()
+        }
+    }
+    
+    private func createFirebaseAccount(email: String, password: String) {
+        let alert = UIAlertController(
+            title: "Criar uma nova conta",
+            message: "Você deseja criar uma nova conta?",
+            preferredStyle: .alert
+        )
+        
+        let continuarAction = UIAlertAction(
+            title: "Continuar",
+            style: .default) {  [weak self] _ in
+                guard let self = self else { return }
+                Auth.auth().createUser(withEmail: email, password: password) { result, error in
+                    guard error == nil else {
+                        print("<<<<<Erro ao criar a conta")
+                        return
+                    }
+                    print("<<<<<Sucesso na criação de conta e login efetuado!")
+                    self.delegate?.emailPassAuthorized()
+                }
+            }
+        
+        let cancelarAction = UIAlertAction(
+            title: "Cancelar",
+            style: .cancel) { _ in
+                // retornar
+            }
+        
+        alert.addAction(continuarAction)
+        alert.addAction(cancelarAction)
+        
+        self.delegate?.showAlert(alert: alert)
     }
     
 }

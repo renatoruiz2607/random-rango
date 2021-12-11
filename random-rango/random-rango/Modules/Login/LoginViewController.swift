@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 import GoogleSignIn
 import FacebookCore
 import FacebookLogin
@@ -59,7 +60,7 @@ class LoginViewController: UIViewController {
 
         facebookLoginButton.delegate = self
         facebookLoginButton.isHidden = true
-
+        
         setupUI()
         facebookTap()
         googleTap()
@@ -124,7 +125,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonAction(_ sender: Any) {
-        self.router.route(to: Route.login.rawValue, from: self, parameters: nil)
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text else { return }
+        viewModel.loginWithEmailAndPass(email: email, password: password)
     }
     
     @IBAction func signUpButtonAction(_ sender: Any) {
@@ -149,11 +152,20 @@ extension LoginViewController: LoginButtonDelegate {
     }
     
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+//      try - Auth.auth().signOut() - catch
         socialMediaFirstImage.image = UIImage(named: "facebookLogo")
     }
 }
 
 extension LoginViewController: LoginViewModelDelegate {
+    func emailPassAuthorized() {
+        self.router.route(to: Route.login.rawValue, from: self, parameters: nil)
+    }
+    
+    func showAlert(alert: UIAlertController) {
+        present(alert, animated: true, completion: nil)
+    }
+    
     func googleAuthorized() {
         self.router.route(to: Route.login.rawValue, from: self, parameters: nil)
     }
