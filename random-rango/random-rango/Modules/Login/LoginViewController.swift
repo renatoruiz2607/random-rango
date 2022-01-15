@@ -1,4 +1,4 @@
-//
+/
 //  LoginViewController.swift
 //  random-rango
 //
@@ -128,6 +128,20 @@ class LoginViewController: UIViewController {
         guard let email = emailTextField.text,
               let password = passwordTextField.text else { return }
         viewModel.loginWithEmailAndPass(email: email, password: password)
+        
+        if self.emailTextField.validateEmail() && self.passwordTextField.validatePassword(){
+            self.showAlert(title: "Sucesso ao logar")
+        }else{
+            self.showAlert(title: "Erro ao logar")
+        }
+    }
+    
+    
+    func showAlert(title:String){
+        let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertController.addAction(okButton)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func signUpButtonAction(_ sender: Any) {
@@ -173,5 +187,20 @@ extension LoginViewController: LoginViewModelDelegate {
     func facebookAuthorized() {
         self.router.route(to: Route.login.rawValue, from: self, parameters: nil)
         socialMediaFirstImage.image = UIImage(named: "logoutFacebookLogo")
+    }
+}
+
+extension UITextField {
+    
+    func validateEmail()->Bool{
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let validateRegex = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return validateRegex.evaluate(with: self.text)
+    }
+    
+    func validatePassword()->Bool{
+        let passwordRegex = ".{6,}"
+        let validateRegex = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
+        return validateRegex.evaluate(with: self.text)
     }
 }
