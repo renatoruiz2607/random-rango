@@ -129,7 +129,6 @@ class LoginViewController: UIViewController {
         
         if self.emailTextField.validateEmail() && self.passwordTextField.validatePassword(){
             viewModel.loginWithEmailAndPass(email: email, password: password)
-//            self.showAlert(title: "Sucesso ao logar")
         }else{
             self.showAlert(title: "Erro ao logar")
         }
