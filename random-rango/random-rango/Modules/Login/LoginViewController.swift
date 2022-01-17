@@ -1,4 +1,3 @@
-/
 //  LoginViewController.swift
 //  random-rango
 //
@@ -127,10 +126,10 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonAction(_ sender: Any) {
         guard let email = emailTextField.text,
               let password = passwordTextField.text else { return }
-        viewModel.loginWithEmailAndPass(email: email, password: password)
         
         if self.emailTextField.validateEmail() && self.passwordTextField.validatePassword(){
-            self.showAlert(title: "Sucesso ao logar")
+            viewModel.loginWithEmailAndPass(email: email, password: password)
+//            self.showAlert(title: "Sucesso ao logar")
         }else{
             self.showAlert(title: "Erro ao logar")
         }
