@@ -153,7 +153,8 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+    func sign(_ signIn: GIDSignIn?, didSignInFor user: GIDGoogleUser?, withError error: Error?) {
+        guard let user = user else { return }
         viewModel.authAndSignInGoogle(user: user)
     }
 }
