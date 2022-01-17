@@ -18,7 +18,7 @@ class ForgotPassRouter {
         case .register:
 //            let vm =
 //            let router =
-            let vc = RegisterViewController()
+            let vc = InfoUsuarioViewController()
 //            vc.modalPresentationStyle = .fullScreen
 //            context.navigationController?.show(vc, sender: nil)
 //            context.show(vc, sender: nil)

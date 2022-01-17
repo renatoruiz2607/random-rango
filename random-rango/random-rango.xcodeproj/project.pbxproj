@@ -17,6 +17,10 @@
 		0390A075272EE2E100FB1B2F /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390A074272EE2E100FB1B2F /* FilterViewModel.swift */; };
 		0390A0782731705600FB1B2F /* SugestaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390A0762731705600FB1B2F /* SugestaoViewController.swift */; };
 		0390A0792731705600FB1B2F /* SugestaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0390A0772731705600FB1B2F /* SugestaoViewController.xib */; };
+		03E5F21827446433003981D0 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5F21627446433003981D0 /* PerfilViewController.swift */; };
+		03E5F21927446433003981D0 /* PerfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E5F21727446433003981D0 /* PerfilViewController.xib */; };
+		03E5F21D2745E244003981D0 /* InfoUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5F21B2745E244003981D0 /* InfoUsuarioViewController.swift */; };
+		03E5F21E2745E244003981D0 /* InfoUsuarioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E5F21C2745E244003981D0 /* InfoUsuarioViewController.xib */; };
 		5F11E58527336C1F00320EF5 /* ForgotPassRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F11E58427336C1F00320EF5 /* ForgotPassRouter.swift */; };
 		5F64409F2731E0960096B597 /* FilterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F64409E2731E0960096B597 /* FilterRouter.swift */; };
 		5F683B9D27288126008E35AF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F683B9C27288126008E35AF /* LoginRouter.swift */; };
@@ -85,6 +89,10 @@
 		0390A074272EE2E100FB1B2F /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		0390A0762731705600FB1B2F /* SugestaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugestaoViewController.swift; sourceTree = "<group>"; };
 		0390A0772731705600FB1B2F /* SugestaoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SugestaoViewController.xib; sourceTree = "<group>"; };
+		03E5F21627446433003981D0 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		03E5F21727446433003981D0 /* PerfilViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilViewController.xib; sourceTree = "<group>"; };
+		03E5F21B2745E244003981D0 /* InfoUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUsuarioViewController.swift; sourceTree = "<group>"; };
+		03E5F21C2745E244003981D0 /* InfoUsuarioViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoUsuarioViewController.xib; sourceTree = "<group>"; };
 		1FFDAC11D759135ADF8F6FE5 /* Pods-random-rangoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rangoTests.release.xcconfig"; path = "Target Support Files/Pods-random-rangoTests/Pods-random-rangoTests.release.xcconfig"; sourceTree = "<group>"; };
 		2AFEF16147A4E4795FDB91A7 /* Pods_random_rangoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_random_rangoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F11E58427336C1F00320EF5 /* ForgotPassRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassRouter.swift; sourceTree = "<group>"; };
@@ -171,6 +179,25 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		03E5F21527446417003981D0 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				03E5F21627446433003981D0 /* PerfilViewController.swift */,
+				03E5F21727446433003981D0 /* PerfilViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		03E5F21A2745E21E003981D0 /* InformaçõesUsuario */ = {
+			isa = PBXGroup;
+			children = (
+				03E5F21B2745E244003981D0 /* InfoUsuarioViewController.swift */,
+				03E5F21C2745E244003981D0 /* InfoUsuarioViewController.xib */,
+			);
+			name = "InformaçõesUsuario";
+			path = "InformaçõesUsuario";
+			sourceTree = "<group>";
+		};
 		5F64409D2731DFEC0096B597 /* ForgotPass */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +282,8 @@
 		5FC5232E271D059600DC2B7A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				03E5F21A2745E21E003981D0 /* InformaçõesUsuario */,
+				03E5F21527446417003981D0 /* Profile */,
 				5F64409D2731DFEC0096B597 /* ForgotPass */,
 				5FEFDD4B27261B2F00FD7915 /* Login */,
 				64F2F33327221F1E00030EF7 /* Historic */,
@@ -499,12 +528,14 @@
 				5FC5233C271DCE7C00DC2B7A /* ButtonCell.xib in Resources */,
 				5FC52332271D066700DC2B7A /* HomeViewController.xib in Resources */,
 				5F90EE6B2720756C005EFE17 /* IntroViewController.xib in Resources */,
+				03E5F21E2745E244003981D0 /* InfoUsuarioViewController.xib in Resources */,
 				5FC52338271DCE6D00DC2B7A /* TextFieldCell.xib in Resources */,
 				5F70D8F7271DED31002128A3 /* RouterTestViewController.xib in Resources */,
 				5FEFDD4F27261B4C00FD7915 /* LoginViewController.xib in Resources */,
 				030D4D0B2723A21D007753D1 /* ForgotPasswordViewController.xib in Resources */,
 				030D4CF52720E573007753D1 /* RegisterViewController.xib in Resources */,
 				DCCEB9192720F1D800B70846 /* SugestionViewController.xib in Resources */,
+				03E5F21927446433003981D0 /* PerfilViewController.xib in Resources */,
 				0390A0792731705600FB1B2F /* SugestaoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,6 +672,7 @@
 				5FC52340271DD27700DC2B7A /* HomeSectionModel.swift in Sources */,
 				5F70D8F6271DED31002128A3 /* RouterTestViewController.swift in Sources */,
 				5F683B9D27288126008E35AF /* LoginRouter.swift in Sources */,
+				03E5F21827446433003981D0 /* PerfilViewController.swift in Sources */,
 				5F90EE6D27207587005EFE17 /* IntroRouter.swift in Sources */,
 				5FC522FF271CFBD100DC2B7A /* AppDelegate.swift in Sources */,
 				DCCEB9182720F1D800B70846 /* SugestionViewController.swift in Sources */,
@@ -653,6 +685,7 @@
 				5FC52301271CFBD100DC2B7A /* SceneDelegate.swift in Sources */,
 				030D4D0A2723A21D007753D1 /* ForgotPasswordViewController.swift in Sources */,
 				5FC52331271D066700DC2B7A /* HomeViewController.swift in Sources */,
+				03E5F21D2745E244003981D0 /* InfoUsuarioViewController.swift in Sources */,
 				64F2F33527221F3400030EF7 /* HistoricViewController.swift in Sources */,
 				64F2F3382722232E00030EF7 /* HistoricView.swift in Sources */,
 				5F11E58527336C1F00320EF5 /* ForgotPassRouter.swift in Sources */,

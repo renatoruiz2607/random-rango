@@ -54,12 +54,12 @@ class LoginViewController: UIViewController {
         logoImage.image = UIImage(named: "appLogo")
         socialMediaFirstImage.image = UIImage(named: "googleLogoG")
         socialMediaSecondImage.image = UIImage(named: "facebookLogo")
-        forgotPassButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
-        signUpButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
-        historicButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
+        forgotPassButton.tintColor = UIColor(red: 0.90, green: 0.34, blue: 0.34, alpha: 1.00)
+        signUpButton.tintColor = UIColor(red: 0.90, green: 0.34, blue: 0.34, alpha: 1.00)
+        historicButton.tintColor = UIColor(red: 0.90, green: 0.34, blue: 0.34, alpha: 1.00)
         
         loginButton.tintColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
-        loginButton.backgroundColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
+        loginButton.backgroundColor = UIColor(red: 0.89, green: 0.24, blue: 0.25, alpha: 0.80)
         loginButton.layer.cornerRadius = 25.0
         
         textFieldUI(textFieldNeeded: emailTextField)
