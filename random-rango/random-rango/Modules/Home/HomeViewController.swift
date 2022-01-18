@@ -53,9 +53,28 @@ class HomeViewController: UIViewController {
        nameLabel.textColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
        logoutButton.tintColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
        historicButton.tintColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
+       profileImage.layer.cornerRadius = 55
+       profileImage.layer.borderColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00).cgColor
+       profileImage.layer.borderWidth = 2
+       
    }
    
    func setup() {
 
    }
+    
+    
+    @IBAction func logoutButtonAction(_ sender: Any) {
+
+        
+    }
+    
+    @IBAction func historicButtonAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func searchButtonAction(_ sender: Any) {
+        
+    }
+    
 }
