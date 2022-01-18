@@ -44,7 +44,7 @@ class LoginRouter {
         case .historic:
 //            let vm =
 //            let router =
-            let vc = HistoricViewController()
+            let vc = HomeViewController(router: HomeRouter())
 //            vc.modalPresentationStyle = .fullScreen
             context.navigationController?.show(vc, sender: nil)
         }
