@@ -66,7 +66,6 @@ class HomeViewController: UIViewController {
     
     @IBAction func logoutButtonAction(_ sender: Any) {
 
-        
     }
     
     @IBAction func historicButtonAction(_ sender: Any) {

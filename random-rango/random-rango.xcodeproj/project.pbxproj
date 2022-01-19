@@ -45,6 +45,7 @@
 		5FC5233B271DCE7C00DC2B7A /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC52339271DCE7C00DC2B7A /* ButtonCell.swift */; };
 		5FC5233C271DCE7C00DC2B7A /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FC5233A271DCE7C00DC2B7A /* ButtonCell.xib */; };
 		5FC52340271DD27700DC2B7A /* HomeSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC5233F271DD27700DC2B7A /* HomeSectionModel.swift */; };
+		5FC976282798DC960011E467 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC976272798DC960011E467 /* HomeViewModel.swift */; };
 		5FE2E03A27430A8E00445A83 /* SugestaoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE2E03927430A8E00445A83 /* SugestaoService.swift */; };
 		5FE2E03C27430AE000445A83 /* SugestaoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE2E03B27430AE000445A83 /* SugestaoViewModel.swift */; };
 		5FEFDD4E27261B4C00FD7915 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEFDD4C27261B4C00FD7915 /* LoginViewController.swift */; };
@@ -128,6 +129,7 @@
 		5FC52339271DCE7C00DC2B7A /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		5FC5233A271DCE7C00DC2B7A /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		5FC5233F271DD27700DC2B7A /* HomeSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionModel.swift; sourceTree = "<group>"; };
+		5FC976272798DC960011E467 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5FE2E03927430A8E00445A83 /* SugestaoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugestaoService.swift; sourceTree = "<group>"; };
 		5FE2E03B27430AE000445A83 /* SugestaoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugestaoViewModel.swift; sourceTree = "<group>"; };
 		5FEFDD4C27261B4C00FD7915 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				5FC5232F271D066700DC2B7A /* HomeViewController.swift */,
 				5FC52330271D066700DC2B7A /* HomeViewController.xib */,
 				5F70D8F1271DE3CB002128A3 /* HomeRouter.swift */,
+				5FC976272798DC960011E467 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -707,6 +710,7 @@
 				5F70D8F6271DED31002128A3 /* RouterTestViewController.swift in Sources */,
 				5F81187F275F9063006E377F /* LoginViewModel.swift in Sources */,
 				64AB58562745ACB400438B16 /* HistoricViewModel.swift in Sources */,
+				5FC976282798DC960011E467 /* HomeViewModel.swift in Sources */,
 				5F683B9D27288126008E35AF /* LoginRouter.swift in Sources */,
 				5FE2E03A27430A8E00445A83 /* SugestaoService.swift in Sources */,
 				5F90EE6D27207587005EFE17 /* IntroRouter.swift in Sources */,
