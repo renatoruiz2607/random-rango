@@ -47,7 +47,6 @@ class IntroViewController: UIViewController {
         introBackgroundView.addSubview(backgroundImage)
         introBackgroundView.sendSubviewToBack(backgroundImage)
        
-        
         skipButton.layer.cornerRadius = 15.0
         skipButton.layer.borderWidth = 1
         skipButton.layer.borderColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00).cgColor
@@ -60,8 +59,6 @@ class IntroViewController: UIViewController {
         circuloLayer.layer.borderWidth = 0.5
         circuloLayer.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00)
         circuloLayer.layer.borderColor = UIColor.clear.cgColor
-        
-        
     }
     
     @IBAction func skipButtonAction(_ sender: Any) {

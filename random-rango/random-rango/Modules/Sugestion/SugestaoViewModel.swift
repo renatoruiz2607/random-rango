@@ -21,7 +21,6 @@ class SugestaoViewModel {
             service.downloadFromUrl(from: url) { data, _, error in
                 guard let data = data, error == nil else { return }
                 DispatchQueue.main.async { [unowned self] in
-//                    return imageView.image = UIImage(data: data) ?? UIImage()
                     imageView.onNext(UIImage(data: data) ?? UIImage())
                 }
             }

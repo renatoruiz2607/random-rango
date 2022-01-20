@@ -29,27 +29,12 @@ class RegisterViewController: UIViewController {
         criarCadastroButton.layer.borderWidth = 1
         criarCadastroButton.layer.borderColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00).cgColor
         criarCadastroButton.clipsToBounds = true
-        
-//        emailTextField.layer.cornerRadius = 25.0
-//        emailTextField.layer.borderWidth = 1
-//        emailTextField.layer.borderColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00).cgColor
-//        emailTextField.clipsToBounds = true
 
         textFieldConfig(textFieldNeeded: emailTextField)
         textFieldConfig(textFieldNeeded: senhaTextField)
         textFieldConfig(textFieldNeeded: confirmarSenhaTextField)
         
-//        senhaTextField.layer.cornerRadius = 25.0
-//        senhaTextField.layer.borderWidth = 1
-//        senhaTextField.layer.borderColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00).cgColor
-//        senhaTextField.clipsToBounds = true
-        
-//        confirmarSenhaTextField.layer.cornerRadius = 25.0
-//        confirmarSenhaTextField.layer.borderWidth = 1
-//        confirmarSenhaTextField.layer.borderColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00).cgColor
-//        confirmarSenhaTextField.clipsToBounds = true
-        
-        criarCadastroButton.tintColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)//(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
+        criarCadastroButton.tintColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
         }
         
     func textFieldConfig(textFieldNeeded: UITextField) {

@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class HomeViewModel {
+    
+    let profile: Array<String>
+    
+    init(profile: Array<String>) {
+        self.profile = profile
+    }
+    
+}

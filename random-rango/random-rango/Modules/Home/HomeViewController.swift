@@ -21,6 +21,7 @@ class HomeViewController: UIViewController {
    private let disposeBag = DisposeBag()
    
    let router: HomeRouter
+    let viewModel: HomeViewModel
    
    enum Route: String {
        case login
@@ -29,8 +30,9 @@ class HomeViewController: UIViewController {
        case sugestion
    }
    
-   public init(router: HomeRouter) {
+   public init(router: HomeRouter, viewModel: HomeViewModel) {
        self.router = router
+       self.viewModel = viewModel
        super.init(nibName: "HomeViewController", bundle: Bundle(for: HomeViewController.self))
    }
    
@@ -46,22 +48,35 @@ class HomeViewController: UIViewController {
    
    func setupUI(){
        view.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00)
-       logoImage.image = UIImage(named: "appLogo")
        searchButton.tintColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
        searchButton.backgroundColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
        searchButton.layer.cornerRadius = 25.0
        nameLabel.textColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
        logoutButton.tintColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
        historicButton.tintColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
+       profileImage.image = UIImage(named: "userLogo")
        profileImage.layer.cornerRadius = 55
        profileImage.layer.borderColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00).cgColor
        profileImage.layer.borderWidth = 2
-       
    }
    
    func setup() {
-
+       if let url = URL(string: viewModel.profile.last ?? "") {
+           if url != URL(string: "") {
+               downloadFromUrl(from: url) { data, _, error in
+                   guard let data = data, error == nil else { return }
+                   DispatchQueue.main.async { [unowned self] in
+                       profileImage.image = UIImage(data: data) ?? UIImage()
+                   }
+               }
+           }
+       }
+       nameLabel.text = viewModel.profile.first ?? ""
    }
+    
+    func downloadFromUrl(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
     
     
     @IBAction func logoutButtonAction(_ sender: Any) {

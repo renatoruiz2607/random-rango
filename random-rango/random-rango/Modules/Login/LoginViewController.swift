@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
     let facebookLoginButton = FBLoginButton(frame: .zero, permissions: [.publicProfile])
     let viewModel: LoginViewModel
     let router: LoginRouter
-
+    
     enum Route: String {
         case login
         case forgotPass
@@ -173,7 +173,7 @@ extension LoginViewController: LoginButtonDelegate {
 
 extension LoginViewController: LoginViewModelDelegate {
     func emailPassAuthorized() {
-        self.router.route(to: Route.login.rawValue, from: self, parameters: nil)
+        self.router.route(to: Route.login.rawValue, from: self, parameters: viewModel.profile)
     }
     
     func showAlert(alert: UIAlertController) {
@@ -181,11 +181,11 @@ extension LoginViewController: LoginViewModelDelegate {
     }
     
     func googleAuthorized() {
-        self.router.route(to: Route.login.rawValue, from: self, parameters: nil)
+        self.router.route(to: Route.login.rawValue, from: self, parameters: viewModel.profile)
     }
     
     func facebookAuthorized() {
-        self.router.route(to: Route.login.rawValue, from: self, parameters: nil)
+        self.router.route(to: Route.login.rawValue, from: self, parameters: viewModel.profile)
         socialMediaFirstImage.image = UIImage(named: "logoutFacebookLogo")
     }
 }
