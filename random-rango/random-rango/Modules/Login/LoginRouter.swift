@@ -31,8 +31,7 @@ class LoginRouter {
             let vc = ForgotPasswordViewController(router: ForgotPassRouter())
             context.navigationController?.show(vc, sender: nil)
         case .sugestion:
-            let vc = SugestionViewController()
-            context.navigationController?.show(vc, sender: nil)
+            break
         case .historic:
             let vc = HistoricViewController()
             context.navigationController?.show(vc, sender: nil)
