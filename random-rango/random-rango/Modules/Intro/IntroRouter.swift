@@ -18,7 +18,7 @@ class IntroRouter {
         case .skip:
 //            let vm =
 //            let router =
-            let vc = LoginViewController(router: LoginRouter(), viewModel: LoginViewModel())
+            let vc = LoginViewController(router: LoginRouter(), viewModel: LoginViewModel(profile: []))
 //            vc.modalPresentationStyle = .fullScreen
 //            context.navigationController?.show(vc, sender: nil)
 //            context.show(vc, sender: nil)

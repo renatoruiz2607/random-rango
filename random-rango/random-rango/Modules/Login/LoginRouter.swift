@@ -16,11 +16,13 @@ class LoginRouter {
         
         switch route {
         case .login:
-//            let vm =
-//            let router =
-//            let vc = HomeViewController(router: HomeRouter())
-            let vc = FilterViewController(router: FilterRouter(), viewModel: FilterViewModel())
-//            let vc = ForgotPasswordViewController()
+            guard let profile = parameters as? Array<String> else {
+                assertionFailure("Parameter type cast fail!")
+                return
+            }
+            let vm = HomeViewModel(profile: profile)
+            let router = HomeRouter()
+            let vc = HomeViewController(router: router, viewModel: vm)
 //            vc.modalPresentationStyle = .fullScreen
             context.navigationController?.show(vc, sender: nil)
         case .signUp:
@@ -42,9 +44,15 @@ class LoginRouter {
 //            vc.modalPresentationStyle = .fullScreen
             context.navigationController?.show(vc, sender: nil)
         case .historic:
-//            let vm =
-//            let router =
-            let vc = HomeViewController(router: HomeRouter())
+//            guard let profileImage = parameters as? String else {
+//                assertionFailure("Parameter type cast fail!")
+//                return
+//            }
+            
+//            let vm = HomeViewModel(profileImage: profileImage)
+//            let router = HomeRouter()
+//            let vc = HomeViewController(router: router, viewModel: vm)
+            let vc = HistoricViewController()
 //            vc.modalPresentationStyle = .fullScreen
             context.navigationController?.show(vc, sender: nil)
         }

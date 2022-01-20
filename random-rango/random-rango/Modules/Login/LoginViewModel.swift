@@ -23,6 +23,11 @@ protocol LoginViewModelDelegate {
 class LoginViewModel {
     
     var delegate: LoginViewModelDelegate?
+    var profile: Array<String>
+
+    init(profile: Array<String>) {
+        self.profile = profile
+    }
     
     func authAndSignInGoogle(user: GIDGoogleUser) {
         guard
@@ -38,6 +43,7 @@ class LoginViewModel {
         Auth.auth().signIn(with: credential) { authResult, error in
             if let error = error { return }
             print("Usuário logado ao Firebase")
+            self.profile = [Auth.auth().currentUser?.displayName ?? "", Auth.auth().currentUser?.photoURL?.absoluteString ?? ""]
             self.delegate?.googleAuthorized()
         }
     }
@@ -49,7 +55,6 @@ class LoginViewModel {
         case .some(let loginResult):
             if let token = loginResult.token?.tokenString {
                 loginFacebookNoFirebase(accessToken: token)
-                self.delegate?.facebookAuthorized()
             }
         }
     }
@@ -63,6 +68,10 @@ class LoginViewModel {
                 print ("Erro ao logar no firebase")
             }
             print("Usuário efetuou login no Firebase")
+            let photoUrl = Auth.auth().currentUser?.photoURL?.absoluteString ?? ""
+            let fbPhotoUrl = "\(photoUrl)?height=500&access_token=\(accessToken)"
+            self.profile = [Auth.auth().currentUser?.displayName ?? "", fbPhotoUrl]
+            self.delegate?.facebookAuthorized()
         }
     }
     
@@ -76,6 +85,7 @@ class LoginViewModel {
                 return
             }
             print("<<<<<O usuário fez login com sucesso!")
+            self.profile = [email, ""]
             self.delegate?.emailPassAuthorized()
         }
     }
@@ -97,6 +107,7 @@ class LoginViewModel {
                         return
                     }
                     print("<<<<<Sucesso na criação de conta e login efetuado!")
+                    self.profile = [email, ""]
                     self.delegate?.emailPassAuthorized()
                 }
             }

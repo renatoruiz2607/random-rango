@@ -18,7 +18,7 @@ class HomeRouter {
         case .login:
 //            let vm =
 //            let router =
-            let vc = LoginViewController(router: LoginRouter(), viewModel: LoginViewModel())
+            let vc = LoginViewController(router: LoginRouter(), viewModel: LoginViewModel(profile: []))
 //            let vc = ForgotPasswordViewController()
 //            vc.modalPresentationStyle = .fullScreen
 //            vc.view.backgroundColor = .white
