@@ -62,8 +62,6 @@
 		871E11A9F5DA4A6D6A1EC37A /* Pods_random_rangoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFEF16147A4E4795FDB91A7 /* Pods_random_rangoTests.framework */; };
 		AC5CA1E474D18E4DAA41B481 /* Pods_random_rango_random_rangoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753FABCA6B8940F1465C62DE /* Pods_random_rango_random_rangoUITests.framework */; };
 		B1F809CE1B2D979F20A4C25E /* Pods_random_rango.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B01ADD6E5A2DCA9BFF76650 /* Pods_random_rango.framework */; };
-		DCCEB9182720F1D800B70846 /* SugestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCEB9162720F1D800B70846 /* SugestionViewController.swift */; };
-		DCCEB9192720F1D800B70846 /* SugestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCEB9172720F1D800B70846 /* SugestionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,8 +145,6 @@
 		753FABCA6B8940F1465C62DE /* Pods_random_rango_random_rangoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_random_rango_random_rangoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B01ADD6E5A2DCA9BFF76650 /* Pods_random_rango.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_random_rango.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BAE58EDA509F031B7881A75 /* Pods-random-rango-random-rangoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rango-random-rangoUITests.release.xcconfig"; path = "Target Support Files/Pods-random-rango-random-rangoUITests/Pods-random-rango-random-rangoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		DCCEB9162720F1D800B70846 /* SugestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugestionViewController.swift; sourceTree = "<group>"; };
-		DCCEB9172720F1D800B70846 /* SugestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SugestionViewController.xib; sourceTree = "<group>"; };
 		ED7200E059B5F6F49D74E24F /* Pods-random-rango.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rango.debug.xcconfig"; path = "Target Support Files/Pods-random-rango/Pods-random-rango.debug.xcconfig"; sourceTree = "<group>"; };
 		F967E77EB0593193027EFD90 /* Pods-random-rango.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-rango.release.xcconfig"; path = "Target Support Files/Pods-random-rango/Pods-random-rango.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -391,8 +387,6 @@
 		DCCEB9152720F1A800B70846 /* Sugestion */ = {
 			isa = PBXGroup;
 			children = (
-				DCCEB9162720F1D800B70846 /* SugestionViewController.swift */,
-				DCCEB9172720F1D800B70846 /* SugestionViewController.xib */,
 				0390A0762731705600FB1B2F /* SugestaoViewController.swift */,
 				0390A0772731705600FB1B2F /* SugestaoViewController.xib */,
 				5FE2E03927430A8E00445A83 /* SugestaoService.swift */,
@@ -536,7 +530,6 @@
 				5FEFDD4F27261B4C00FD7915 /* LoginViewController.xib in Resources */,
 				030D4D0B2723A21D007753D1 /* ForgotPasswordViewController.xib in Resources */,
 				030D4CF52720E573007753D1 /* RegisterViewController.xib in Resources */,
-				DCCEB9192720F1D800B70846 /* SugestionViewController.xib in Resources */,
 				0390A0792731705600FB1B2F /* SugestaoViewController.xib in Resources */,
 				5F32B5652759351C00DE7C48 /* GoogleService-Info.plist in Resources */,
 			);
@@ -715,7 +708,6 @@
 				5FE2E03A27430A8E00445A83 /* SugestaoService.swift in Sources */,
 				5F90EE6D27207587005EFE17 /* IntroRouter.swift in Sources */,
 				5FC522FF271CFBD100DC2B7A /* AppDelegate.swift in Sources */,
-				DCCEB9182720F1D800B70846 /* SugestionViewController.swift in Sources */,
 				5FEFDD4E27261B4C00FD7915 /* LoginViewController.swift in Sources */,
 				030D4CF92720EA85007753D1 /* ExtensionUIView.swift in Sources */,
 				5F87E15B27473F1A00591BA8 /* Restaurant+CoreDataProperties.swift in Sources */,

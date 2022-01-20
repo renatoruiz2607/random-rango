@@ -23,37 +23,18 @@ class LoginRouter {
             let vm = HomeViewModel(profile: profile)
             let router = HomeRouter()
             let vc = HomeViewController(router: router, viewModel: vm)
-//            vc.modalPresentationStyle = .fullScreen
             context.navigationController?.show(vc, sender: nil)
         case .signUp:
-//            let vm =
-//            let router =
             let vc = RegisterViewController()
-//            vc.modalPresentationStyle = .fullScreen
             context.navigationController?.show(vc, sender: nil)
         case .forgotPass:
-//            let vm =
-//            let router =
             let vc = ForgotPasswordViewController(router: ForgotPassRouter())
-//            vc.modalPresentationStyle = .fullScreen
             context.navigationController?.show(vc, sender: nil)
         case .sugestion:
-//            let vm =
-//            let router =
             let vc = SugestionViewController()
-//            vc.modalPresentationStyle = .fullScreen
             context.navigationController?.show(vc, sender: nil)
         case .historic:
-//            guard let profileImage = parameters as? String else {
-//                assertionFailure("Parameter type cast fail!")
-//                return
-//            }
-            
-//            let vm = HomeViewModel(profileImage: profileImage)
-//            let router = HomeRouter()
-//            let vc = HomeViewController(router: router, viewModel: vm)
             let vc = HistoricViewController()
-//            vc.modalPresentationStyle = .fullScreen
             context.navigationController?.show(vc, sender: nil)
         }
     }

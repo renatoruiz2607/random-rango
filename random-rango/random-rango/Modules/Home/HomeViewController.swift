@@ -54,6 +54,7 @@ class HomeViewController: UIViewController {
        nameLabel.textColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
        logoutButton.tintColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
        historicButton.tintColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
+       profileImage.image = UIImage(named: "userLogo")
        profileImage.layer.cornerRadius = 55
        profileImage.layer.borderColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00).cgColor
        profileImage.layer.borderWidth = 2
