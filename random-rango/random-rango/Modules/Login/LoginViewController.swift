@@ -10,6 +10,8 @@ import FirebaseAuth
 import GoogleSignIn
 import FacebookCore
 import FacebookLogin
+import FBSDKLoginKit
+import FBSDKCoreKit
 
 class LoginViewController: UIViewController {
 
@@ -23,7 +25,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var forgotPassButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var historicButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContentView: UIView!
 
@@ -64,6 +65,19 @@ class LoginViewController: UIViewController {
         facebookTap()
         googleTap()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        clearTextFields()
+        if Auth.auth().currentUser != nil {
+            do {
+                try Auth.auth().signOut()
+                socialMediaFirstImage.image = UIImage(named: "facebookLogo")
+                loginButtonDidLogOut(facebookLoginButton)
+            } catch let signOutError as NSError {
+                print(signOutError.localizedDescription)
+            }
+        }
+    }
 
     func setupUI() {
         view.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00)
@@ -74,14 +88,13 @@ class LoginViewController: UIViewController {
         forgotPassButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
         forgotPassButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 24)
         signUpButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
-        historicButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
 
         logoImage.image = UIImage(named: "appLogo")
         socialMediaFirstImage.image = UIImage(named: "facebookLogo")
         socialMediaSecondImage.image = UIImage(named: "googleLogoG")
 
         loginButton.tintColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
-        loginButton.backgroundColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
+        loginButton.backgroundColor = UIColor(red: 0.89, green: 0.24, blue: 0.25, alpha: 0.80)
         loginButton.layer.cornerRadius = 25.0
 
         textFieldUI(textFieldNeeded: emailTextField)
@@ -115,6 +128,11 @@ class LoginViewController: UIViewController {
         socialMediaFirstImage.isUserInteractionEnabled = true
         socialMediaFirstImage.addGestureRecognizer(facebookTap)
     }
+    
+    func clearTextFields() {
+        emailTextField.text = ""
+        passwordTextField.text = ""
+    }
 
     @objc func facebookTapWasPressed() {
         facebookLoginButton.sendActions(for: .touchUpInside)
@@ -127,8 +145,7 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonAction(_ sender: Any) {
         guard let email = emailTextField.text,
               let password = passwordTextField.text else { return }
-        
-        if self.emailTextField.validateEmail() && self.passwordTextField.validatePassword(){
+        if viewModel.validateEmail(text: email) && viewModel.validatePassword(text: password) {
             viewModel.loginWithEmailAndPass(email: email, password: password)
         }else{
             self.showAlert(title: "Erro ao logar")
@@ -146,10 +163,6 @@ class LoginViewController: UIViewController {
     @IBAction func signUpButtonAction(_ sender: Any) {
         self.router.route(to: Route.signUp.rawValue, from: self, parameters: nil)
     }
-    
-    @IBAction func historicButtonAction(_ sender: Any) {
-        self.router.route(to: Route.historic.rawValue, from: self, parameters: nil)
-    }
 
 }
 
@@ -166,13 +179,14 @@ extension LoginViewController: LoginButtonDelegate {
     }
     
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
-//      try - Auth.auth().signOut() - catch
         socialMediaFirstImage.image = UIImage(named: "facebookLogo")
+        LoginManager().logOut()
     }
 }
 
 extension LoginViewController: LoginViewModelDelegate {
     func emailPassAuthorized() {
+        clearTextFields()
         self.router.route(to: Route.login.rawValue, from: self, parameters: viewModel.profile)
     }
     
@@ -181,26 +195,13 @@ extension LoginViewController: LoginViewModelDelegate {
     }
     
     func googleAuthorized() {
+        clearTextFields()
         self.router.route(to: Route.login.rawValue, from: self, parameters: viewModel.profile)
     }
     
     func facebookAuthorized() {
+        clearTextFields()
         self.router.route(to: Route.login.rawValue, from: self, parameters: viewModel.profile)
         socialMediaFirstImage.image = UIImage(named: "logoutFacebookLogo")
-    }
-}
-
-extension UITextField {
-    
-    func validateEmail()->Bool{
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let validateRegex = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-        return validateRegex.evaluate(with: self.text)
-    }
-    
-    func validatePassword()->Bool{
-        let passwordRegex = ".{6,}"
-        let validateRegex = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
-        return validateRegex.evaluate(with: self.text)
     }
 }

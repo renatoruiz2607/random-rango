@@ -15,18 +15,18 @@ class HomeRouter {
         guard let route = HomeViewController.Route(rawValue: routeID) else { return }
         
         switch route {
-        case .login:
-            let vm = LoginViewModel(profile: [])
-            let router = LoginRouter()
-            let vc = LoginViewController(router: router, viewModel: vm)
-            context.navigationController?.show(vc, sender: nil)
-        case .signUp:
-            let vc = RegisterViewController()
-        case .forgotPass:
+        case .historic:
             let vc = HistoricViewController()
             context.navigationController?.show(vc, sender: nil)
-        case .sugestion:
-            break
+        case .filter:
+            let vm = FilterViewModel()
+            let router = FilterRouter()
+            let vc = FilterViewController(router: router, viewModel: vm)
+            context.navigationController?.show(vc, sender: nil)
         }
+    }
+    
+    func popBack(from context: UIViewController) {
+        context.navigationController?.popViewController(animated: true)
     }
 }

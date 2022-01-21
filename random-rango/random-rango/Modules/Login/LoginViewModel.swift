@@ -59,7 +59,6 @@ class LoginViewModel {
         }
     }
     
-    
     private func loginFacebookNoFirebase(accessToken: String) {
         let credential = FacebookAuthProvider.credential(withAccessToken: accessToken)
         
@@ -122,6 +121,18 @@ class LoginViewModel {
         alert.addAction(cancelarAction)
         
         self.delegate?.showAlert(alert: alert)
+    }
+    
+    func validateEmail(text: String?)->Bool{
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let validateRegex = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return validateRegex.evaluate(with: text)
+    }
+    
+    func validatePassword(text: String?)->Bool{
+        let passwordRegex = ".{6,}"
+        let validateRegex = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
+        return validateRegex.evaluate(with: text)
     }
     
 }
