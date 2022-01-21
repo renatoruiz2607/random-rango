@@ -127,8 +127,7 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonAction(_ sender: Any) {
         guard let email = emailTextField.text,
               let password = passwordTextField.text else { return }
-        
-        if self.emailTextField.validateEmail() && self.passwordTextField.validatePassword(){
+        if viewModel.validateEmail(text: email) && viewModel.validatePassword(text: password) {
             viewModel.loginWithEmailAndPass(email: email, password: password)
         }else{
             self.showAlert(title: "Erro ao logar")
@@ -187,20 +186,5 @@ extension LoginViewController: LoginViewModelDelegate {
     func facebookAuthorized() {
         self.router.route(to: Route.login.rawValue, from: self, parameters: viewModel.profile)
         socialMediaFirstImage.image = UIImage(named: "logoutFacebookLogo")
-    }
-}
-
-extension UITextField {
-    
-    func validateEmail()->Bool{
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let validateRegex = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-        return validateRegex.evaluate(with: self.text)
-    }
-    
-    func validatePassword()->Bool{
-        let passwordRegex = ".{6,}"
-        let validateRegex = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
-        return validateRegex.evaluate(with: self.text)
     }
 }

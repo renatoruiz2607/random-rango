@@ -29,5 +29,21 @@ class random_rangoTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testTextFields_dadoQueRegexEhChamado_quandoReceberEmailESenha_entaoDeveRetornarTrue() throws {
+        XCTAssertTrue(true)
+        var valid = false
+        let viewModel = LoginViewModel(profile: [])
+        let email = "email@email.com"
+        let password = "password"
+        if viewModel.validateEmail(text: email) && viewModel.validatePassword(text: password) {
+            valid = true
+        } else {
+            valid = false
+        }
+        
+        XCTAssertTrue(valid)
+        
+    }
 
 }
