@@ -47,7 +47,7 @@ class HomeViewController: UIViewController {
    func setupUI(){
        view.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 0.89, alpha: 1.00)
        searchButton.tintColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
-       searchButton.backgroundColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
+       searchButton.backgroundColor = UIColor(red: 0.89, green: 0.24, blue: 0.25, alpha: 0.80)
        searchButton.layer.cornerRadius = 25.0
        nameLabel.textColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
        logoutButton.tintColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)

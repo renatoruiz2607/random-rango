@@ -25,7 +25,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var forgotPassButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var historicButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContentView: UIView!
 
@@ -68,6 +67,7 @@ class LoginViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        clearTextFields()
         if Auth.auth().currentUser != nil {
             do {
                 try Auth.auth().signOut()
@@ -88,14 +88,13 @@ class LoginViewController: UIViewController {
         forgotPassButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
         forgotPassButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 24)
         signUpButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
-        historicButton.tintColor = UIColor(red: 0.94, green: 0.59, blue: 0.37, alpha: 1.00)
 
         logoImage.image = UIImage(named: "appLogo")
         socialMediaFirstImage.image = UIImage(named: "facebookLogo")
         socialMediaSecondImage.image = UIImage(named: "googleLogoG")
 
         loginButton.tintColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
-        loginButton.backgroundColor = UIColor(red: 0.88, green: 0.22, blue: 0.33, alpha: 1.00)
+        loginButton.backgroundColor = UIColor(red: 0.89, green: 0.24, blue: 0.25, alpha: 0.80)
         loginButton.layer.cornerRadius = 25.0
 
         textFieldUI(textFieldNeeded: emailTextField)
@@ -129,6 +128,11 @@ class LoginViewController: UIViewController {
         socialMediaFirstImage.isUserInteractionEnabled = true
         socialMediaFirstImage.addGestureRecognizer(facebookTap)
     }
+    
+    func clearTextFields() {
+        emailTextField.text = ""
+        passwordTextField.text = ""
+    }
 
     @objc func facebookTapWasPressed() {
         facebookLoginButton.sendActions(for: .touchUpInside)
@@ -159,10 +163,6 @@ class LoginViewController: UIViewController {
     @IBAction func signUpButtonAction(_ sender: Any) {
         self.router.route(to: Route.signUp.rawValue, from: self, parameters: nil)
     }
-    
-    @IBAction func historicButtonAction(_ sender: Any) {
-        self.router.route(to: Route.historic.rawValue, from: self, parameters: nil)
-    }
 
 }
 
@@ -186,6 +186,7 @@ extension LoginViewController: LoginButtonDelegate {
 
 extension LoginViewController: LoginViewModelDelegate {
     func emailPassAuthorized() {
+        clearTextFields()
         self.router.route(to: Route.login.rawValue, from: self, parameters: viewModel.profile)
     }
     
@@ -194,10 +195,12 @@ extension LoginViewController: LoginViewModelDelegate {
     }
     
     func googleAuthorized() {
+        clearTextFields()
         self.router.route(to: Route.login.rawValue, from: self, parameters: viewModel.profile)
     }
     
     func facebookAuthorized() {
+        clearTextFields()
         self.router.route(to: Route.login.rawValue, from: self, parameters: viewModel.profile)
         socialMediaFirstImage.image = UIImage(named: "logoutFacebookLogo")
     }

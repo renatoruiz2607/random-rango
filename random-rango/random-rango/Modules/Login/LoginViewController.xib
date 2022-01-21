@@ -13,7 +13,6 @@
                 <outlet property="emailTextField" destination="sWa-sh-4b6" id="MeE-5t-Y7K"/>
                 <outlet property="facebookButton" destination="WCL-eV-3dy" id="dLv-di-5dJ"/>
                 <outlet property="forgotPassButton" destination="BNW-jE-1jN" id="eYk-LO-N4A"/>
-                <outlet property="historicButton" destination="rpC-XE-V0A" id="17q-M2-m9o"/>
                 <outlet property="loginButton" destination="yjy-6x-ZhW" id="qDV-28-oaW"/>
                 <outlet property="logoImage" destination="OxJ-Xf-LtB" id="H0a-WM-qkM"/>
                 <outlet property="passwordTextField" destination="2LJ-dN-uG2" id="Cwx-Nk-8K1"/>
@@ -57,7 +56,7 @@
                                         <constraint firstAttribute="height" constant="50" id="6w1-Ly-Hyc"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNW-jE-1jN">
                                     <rect key="frame" x="74" y="348" width="266" height="50"/>
@@ -96,14 +95,14 @@
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sy8-4R-Coc">
-                                    <rect key="frame" x="40" y="664" width="334" height="4"/>
+                                    <rect key="frame" x="40" y="588" width="334" height="4"/>
                                     <color key="backgroundColor" systemColor="systemGray3Color"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="4" id="5JM-v4-BIT"/>
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ou" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Io-Kq-7VM">
-                                    <rect key="frame" x="177" y="652" width="60" height="28"/>
+                                    <rect key="frame" x="177" y="576" width="60" height="28"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="28" id="LYs-kK-pC8"/>
                                         <constraint firstAttribute="width" constant="60" id="rWq-7t-tQz"/>
@@ -112,20 +111,8 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpC-XE-V0A">
-                                    <rect key="frame" x="74" y="576" width="266" height="50"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="W2D-Ap-4Ep"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="Tela de histórico"/>
-                                    <connections>
-                                        <action selector="historicButtonAction:" destination="-1" eventType="touchUpInside" id="Lwm-yB-5OY"/>
-                                    </connections>
-                                </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="CV4-U6-42C">
-                                    <rect key="frame" x="24" y="706" width="366" height="60"/>
+                                    <rect key="frame" x="24" y="630" width="366" height="60"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCL-eV-3dy">
                                             <rect key="frame" x="0.0" y="0.0" width="153" height="60"/>
@@ -184,16 +171,13 @@
                                 <constraint firstAttribute="trailing" secondItem="kIK-uB-2qv" secondAttribute="trailing" constant="74" id="VFC-Lf-uOE"/>
                                 <constraint firstItem="2LJ-dN-uG2" firstAttribute="leading" secondItem="oUY-51-CqN" secondAttribute="leading" constant="24" id="Ze7-WL-6s0"/>
                                 <constraint firstAttribute="trailing" secondItem="2LJ-dN-uG2" secondAttribute="trailing" constant="24" id="aCA-pz-2ZQ"/>
-                                <constraint firstItem="rpC-XE-V0A" firstAttribute="top" secondItem="kIK-uB-2qv" secondAttribute="bottom" constant="26" id="ccN-Yf-yo5"/>
+                                <constraint firstItem="5Io-Kq-7VM" firstAttribute="top" secondItem="kIK-uB-2qv" secondAttribute="bottom" constant="26" id="b3H-9t-i7n"/>
                                 <constraint firstAttribute="trailing" secondItem="sWa-sh-4b6" secondAttribute="trailing" constant="24" id="eZ7-LD-c9o"/>
                                 <constraint firstItem="kIK-uB-2qv" firstAttribute="leading" secondItem="oUY-51-CqN" secondAttribute="leading" constant="74" id="i1c-mj-Xi8"/>
-                                <constraint firstItem="rpC-XE-V0A" firstAttribute="leading" secondItem="oUY-51-CqN" secondAttribute="leading" constant="74" id="oB1-Et-HVC"/>
                                 <constraint firstItem="sWa-sh-4b6" firstAttribute="leading" secondItem="oUY-51-CqN" secondAttribute="leading" constant="24" id="obZ-8h-BXm"/>
                                 <constraint firstItem="CV4-U6-42C" firstAttribute="leading" secondItem="oUY-51-CqN" secondAttribute="leading" constant="24" id="pmz-kH-hCP"/>
-                                <constraint firstAttribute="trailing" secondItem="rpC-XE-V0A" secondAttribute="trailing" constant="74" id="pua-2H-ogQ"/>
                                 <constraint firstItem="5Io-Kq-7VM" firstAttribute="centerY" secondItem="Sy8-4R-Coc" secondAttribute="centerY" id="qbr-vb-9ew"/>
                                 <constraint firstItem="Sy8-4R-Coc" firstAttribute="leading" secondItem="oUY-51-CqN" secondAttribute="leading" constant="40" id="qtS-xa-1qM"/>
-                                <constraint firstItem="5Io-Kq-7VM" firstAttribute="top" secondItem="rpC-XE-V0A" secondAttribute="bottom" constant="26" id="rHf-YK-v3I"/>
                                 <constraint firstItem="kIK-uB-2qv" firstAttribute="top" secondItem="yjy-6x-ZhW" secondAttribute="bottom" constant="26" id="rOQ-bR-ka5"/>
                                 <constraint firstItem="5Io-Kq-7VM" firstAttribute="centerX" secondItem="oUY-51-CqN" secondAttribute="centerX" id="sxm-9K-CSB"/>
                                 <constraint firstAttribute="trailing" secondItem="CV4-U6-42C" secondAttribute="trailing" constant="24" id="vP9-SM-Xjs"/>
