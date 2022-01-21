@@ -24,10 +24,8 @@ class HomeViewController: UIViewController {
     let viewModel: HomeViewModel
    
    enum Route: String {
-       case login
-       case forgotPass
-       case signUp
-       case sugestion
+       case historic
+       case filter
    }
    
    public init(router: HomeRouter, viewModel: HomeViewModel) {
@@ -80,15 +78,15 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func logoutButtonAction(_ sender: Any) {
-
+        self.router.popBack(from: self)
     }
     
     @IBAction func historicButtonAction(_ sender: Any) {
-        
+        self.router.route(to: Route.historic.rawValue, from: self, parameters: nil)
     }
     
     @IBAction func searchButtonAction(_ sender: Any) {
-        
+        self.router.route(to: Route.filter.rawValue, from: self, parameters: nil)
     }
     
 }

@@ -10,6 +10,8 @@ import FirebaseAuth
 import GoogleSignIn
 import FacebookCore
 import FacebookLogin
+import FBSDKLoginKit
+import FBSDKCoreKit
 
 class LoginViewController: UIViewController {
 
@@ -63,6 +65,18 @@ class LoginViewController: UIViewController {
         setupUI()
         facebookTap()
         googleTap()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if Auth.auth().currentUser != nil {
+            do {
+                try Auth.auth().signOut()
+                socialMediaFirstImage.image = UIImage(named: "facebookLogo")
+                loginButtonDidLogOut(facebookLoginButton)
+            } catch let signOutError as NSError {
+                print(signOutError.localizedDescription)
+            }
+        }
     }
 
     func setupUI() {
@@ -165,8 +179,8 @@ extension LoginViewController: LoginButtonDelegate {
     }
     
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
-//      try - Auth.auth().signOut() - catch
         socialMediaFirstImage.image = UIImage(named: "facebookLogo")
+        LoginManager().logOut()
     }
 }
 

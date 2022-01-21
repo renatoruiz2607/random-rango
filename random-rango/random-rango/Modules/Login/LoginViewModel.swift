@@ -59,7 +59,6 @@ class LoginViewModel {
         }
     }
     
-    
     private func loginFacebookNoFirebase(accessToken: String) {
         let credential = FacebookAuthProvider.credential(withAccessToken: accessToken)
         
