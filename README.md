@@ -26,3 +26,7 @@ Essa foi a ideia que tivemos para poder criar o app seguindo alguns requisitos m
 - Tela de descrição do item;
 - Tela de listagem de características;
 ● Todo o trabalho deve ser feito utilizando o GitFlow;
+
+Screenshots:
+
+<img width="340" alt="Captura de Tela 2022-01-21 às 21 03 18" src="https://user-images.githubusercontent.com/65797571/150615412-ab67c67f-09bb-42a6-8ee3-de106b802e27.png">
